@@ -30,6 +30,8 @@ import java.util.Base64;
  * Base64DecodeSnippet.
  */
 public class Base64DecodeSnippet {
+  private Base64DecodeSnippet() {
+  }
 
   /**
    * Decodes a Base64 encoded string to the actual representation.

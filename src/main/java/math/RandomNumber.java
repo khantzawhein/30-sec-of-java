@@ -24,7 +24,7 @@
 
 package math;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 /**
  * Random Number between given two values.
@@ -34,7 +34,7 @@ public class RandomNumber {
 
   private RandomNumber() {}
 
-  private static Random random = new Random();
+  private static SecureRandom random = new SecureRandom();
 
   /**
   * Return a random number between two given numbers.

@@ -24,14 +24,14 @@
 
 package math;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 /**
  * Sum of Dice throw (Eg. 3d6 - 3 dice having 6 sides).
  */
 public class DiceThrow {
 
-  private static Random random = new Random();
+  static SecureRandom random = new SecureRandom();
 
   /**
   * Enum for standardized sided dice (4,6,8,10,12 and 20).
