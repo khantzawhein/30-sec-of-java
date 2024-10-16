@@ -29,13 +29,16 @@ package string;
  */
 public class ReverseStringSnippet {
 
-  /**
-   * Reverse string.
-   *
-   * @param s the string to reverse
-   * @return reversed string
-   */
-  public static String reverseString(String s) {
-    return new StringBuilder(s).reverse().toString();
-  }
+    private ReverseStringSnippet() {
+    }
+
+    /**
+     * Reverse string.
+     *
+     * @param s the string to reverse
+     * @return reversed string
+     */
+    public static String reverseString(String s) {
+        return new StringBuilder(s).reverse().toString();
+    }
 }

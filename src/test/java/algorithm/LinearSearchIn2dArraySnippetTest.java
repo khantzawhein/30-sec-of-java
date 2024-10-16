@@ -31,7 +31,7 @@ import org.junit.jupiter.api.Test;
  * Tests for 30 Seconds of Java code library.
  */
 
-public class LinearSearchIn2dArraySnippetTest {
+class LinearSearchIn2dArraySnippetTest {
   /**
    * Test for {@link LinearSearchIn2dArraySnippet #LinearSearchIn2dArraySnippet(int[][],int)}.
    */

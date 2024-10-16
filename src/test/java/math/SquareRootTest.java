@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * Tests for 30 Seconds of Java code library.
  */
-public class SquareRootTest {
+class SquareRootTest {
   /**
    * Test for {@link SquareRoot #SquareRoot(int,int)}.
    */

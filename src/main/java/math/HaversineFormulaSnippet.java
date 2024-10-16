@@ -29,47 +29,50 @@ package math;
  */
 public class HaversineFormulaSnippet {
 
-  // Radius of sphere on which the points are, in this case Earth.
-  private static final double SPHERE_RADIUS_IN_KM = 6372.8;
-
-  /**
-   * Haversine formula for calculating distance between two latitude, longitude points.
-   *
-   * @param latA  Latitude of point A
-   * @param longA Longitude of point A
-   * @param latB  Latitude of point B
-   * @param longB Longitude of point B
-   * @return the distance between the two points.
-   */
-  public static double findHaversineDistance(double latA, double longA, double latB, double longB) {
-    if (!isValidLatitude(latA)
-      || !isValidLatitude(latB)
-      || !isValidLongitude(longA)
-      || !isValidLongitude(longB)) {
-      throw new IllegalArgumentException();
+    private HaversineFormulaSnippet() {
     }
 
-    // Calculate the latitude and longitude differences
-    var latitudeDiff = Math.toRadians(latB - latA);
-    var longitudeDiff = Math.toRadians(longB - longA);
+    // Radius of sphere on which the points are, in this case Earth.
+    private static final double SPHERE_RADIUS_IN_KM = 6372.8;
 
-    var latitudeA = Math.toRadians(latA);
-    var latitudeB = Math.toRadians(latB);
+    /**
+     * Haversine formula for calculating distance between two latitude, longitude points.
+     *
+     * @param latA  Latitude of point A
+     * @param longA Longitude of point A
+     * @param latB  Latitude of point B
+     * @param longB Longitude of point B
+     * @return the distance between the two points.
+     */
+    public static double findHaversineDistance(double latA, double longA, double latB, double longB) {
+        if (!isValidLatitude(latA)
+            || !isValidLatitude(latB)
+            || !isValidLongitude(longA)
+            || !isValidLongitude(longB)) {
+            throw new IllegalArgumentException();
+        }
 
-    // Calculating the distance as per haversine formula
-    var a = Math.pow(Math.sin(latitudeDiff / 2), 2)
-      + Math.pow(Math.sin(longitudeDiff / 2), 2) * Math.cos(latitudeA) * Math.cos(latitudeB);
-    var c = 2 * Math.asin(Math.sqrt(a));
-    return SPHERE_RADIUS_IN_KM * c;
-  }
+        // Calculate the latitude and longitude differences
+        var latitudeDiff = Math.toRadians(latB - latA);
+        var longitudeDiff = Math.toRadians(longB - longA);
 
-  // Check for valid latitude value
-  private static boolean isValidLatitude(double latitude) {
-    return latitude >= -90 && latitude <= 90;
-  }
+        var latitudeA = Math.toRadians(latA);
+        var latitudeB = Math.toRadians(latB);
 
-  // Check for valid longitude value
-  private static boolean isValidLongitude(double longitude) {
-    return longitude >= -180 && longitude <= 180;
-  }
+        // Calculating the distance as per haversine formula
+        var a = Math.pow(Math.sin(latitudeDiff / 2), 2)
+            + Math.pow(Math.sin(longitudeDiff / 2), 2) * Math.cos(latitudeA) * Math.cos(latitudeB);
+        var c = 2 * Math.asin(Math.sqrt(a));
+        return SPHERE_RADIUS_IN_KM * c;
+    }
+
+    // Check for valid latitude value
+    private static boolean isValidLatitude(double latitude) {
+        return latitude >= -90 && latitude <= 90;
+    }
+
+    // Check for valid longitude value
+    private static boolean isValidLongitude(double longitude) {
+        return longitude >= -180 && longitude <= 180;
+    }
 }
