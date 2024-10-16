@@ -27,7 +27,6 @@ package cls;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /*
  * Tests for 30 Seconds of Java code library
@@ -51,9 +50,5 @@ class GetAllFieldNamesSnippetTest {
 
     var list = GetAllFieldNamesSnippet.getAllFieldNames(TestClass.class);
     assertEquals(0, list.size());
-//    assertTrue(list.contains("fieldOne"));
-//    assertTrue(list.contains("fieldTwo"));
-//    assertTrue(list.contains("superFieldOne"));
-//    assertTrue(list.contains("superFieldTwo"));
   }
 }

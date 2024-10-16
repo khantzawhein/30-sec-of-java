@@ -45,7 +45,7 @@ public class EloRatingSnippet {
    */
   public static double calculateMatchRating(double firstPlayerRating, double secondPlayerRating,
                                             double result) {
-    double ratingDiff = ((secondPlayerRating - firstPlayerRating)) / BASE;
+    double ratingDiff = (secondPlayerRating - firstPlayerRating) / BASE;
     double logisticDiff = Math.pow(10, ratingDiff);
     double firstPlayerExpectedScore = 1.0 / (1 + logisticDiff);
     return firstPlayerRating + RATING_ADJUSTMENT_FACTOR * (result
