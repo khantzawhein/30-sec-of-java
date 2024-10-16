@@ -13,10 +13,9 @@ apply plugin: 'java'
 apply plugin: 'jacoco'
 
 jacocoTestReport {
+    dependsOn test
     reports {
-        xml.required = true
-        csv.required = true
-        html.required = true
+        xml.enabled true
     }
 }
 
@@ -24,19 +23,6 @@ java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
 }
-
-//configurations {
-//    checkstyleConfig
-//}
-//
-//// Apply the checkstyle plugin
-//apply plugin: 'checkstyle'
-//checkstyle {
-//    toolVersion = '10.3.4'
-//    config = resources.text.fromArchiveEntry(configurations.checkstyleConfig, 'google_checks.xml')
-//    maxErrors = 0
-//    maxWarnings = 0
-//}
 
 
 // In this section you declare where to find the dependencies of your project
@@ -67,6 +53,7 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    finalizedBy jacocoTestReport
 }
 
 license {
