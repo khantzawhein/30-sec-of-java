@@ -36,7 +36,7 @@ import java.util.stream.Stream;
 public class ReadFileSnippet {
 
     private ReadFileSnippet() {
-    }s
+    }
 
     /**
      * Read file using stream and return list of string lines.
