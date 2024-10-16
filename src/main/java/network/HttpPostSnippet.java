@@ -31,7 +31,6 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.StringJoiner;
 
@@ -50,19 +49,19 @@ public class HttpPostSnippet {
    * @throws InterruptedException if the operation is interrupted
    */
   public static HttpResponse<String> httpPost(String address, Map<String, String> arguments)
-          throws IOException, InterruptedException {
+      throws IOException, InterruptedException {
     var sj = new StringJoiner("&");
     for (var entry : arguments.entrySet()) {
       sj.add(URLEncoder.encode(entry.getKey(), StandardCharsets.UTF_8) + "="
-              + URLEncoder.encode(entry.getValue(), StandardCharsets.UTF_8));
+          + URLEncoder.encode(entry.getValue(), StandardCharsets.UTF_8));
     }
 
     var out = sj.toString().getBytes(StandardCharsets.UTF_8);
     var request = HttpRequest.newBuilder()
-            .uri(URI.create(address))
-            .headers("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8")
-            .POST(HttpRequest.BodyPublishers.ofByteArray(out))
-            .build();
+        .uri(URI.create(address))
+        .headers("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8")
+        .POST(HttpRequest.BodyPublishers.ofByteArray(out))
+        .build();
 
     return HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
   }

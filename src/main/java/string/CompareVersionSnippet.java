@@ -41,8 +41,8 @@ public class CompareVersionSnippet {
    * @param v1 the first version string to compare
    * @param v2 the second version string to compare
    * @return the value {@code 0} if the two strings represent same versions;
-   *     a value less than {@code 0} if {@code v1} is greater than {@code v2}; and
-   *     a value greater than {@code 0} if {@code v2} is greater than {@code v1}
+   * a value less than {@code 0} if {@code v1} is greater than {@code v2}; and
+   * a value greater than {@code 0} if {@code v2} is greater than {@code v1}
    */
   public static int compareVersion(String v1, String v2) {
     var components1 = getVersionComponents(v1);

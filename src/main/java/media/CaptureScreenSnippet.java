@@ -24,20 +24,17 @@
 
 package media;
 
-import java.awt.AWTException;
-import java.awt.Rectangle;
-import java.awt.Robot;
-import java.awt.Toolkit;
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import javax.imageio.ImageIO;
 
 /**
  * CaptureScreenSnippet.
  */
 public class CaptureScreenSnippet {
-    private CaptureScreenSnippet() {
-    }
+  private CaptureScreenSnippet() {
+  }
 
   /**
    * Capture screenshot and save it to PNG file. Credits: https://viralpatel.net/blogs/how-to-take-screen-shots-in-java-taking-screenshots-java/

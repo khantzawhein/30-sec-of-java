@@ -32,12 +32,12 @@ public class BinarySearchIn2dArraySnippet {
   }
 
   /**
-  * Search an item with binarySearch algorithm.
-  *
-  * @param matrix should be sorted
-  * @param target an item to search
-  * @return if location of item is found, otherwise return {-1,-1}
-  */
+   * Search an item with binarySearch algorithm.
+   *
+   * @param matrix should be sorted
+   * @param target an item to search
+   * @return if location of item is found, otherwise return {-1,-1}
+   */
   public static int[] binarySearchIn2darr(int[][] matrix, int target) {
     int rows = matrix.length - 1;
     int cols = matrix[0].length - 1;

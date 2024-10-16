@@ -46,9 +46,9 @@ public class ZipFileSnippet {
   public static void zipFile(String srcFilename, String zipFilename) throws IOException {
     var srcFile = new File(srcFilename);
     try (
-            var fileOut = new FileOutputStream(zipFilename);
-            var zipOut = new ZipOutputStream(fileOut);
-            var fileIn = new FileInputStream(srcFile)
+        var fileOut = new FileOutputStream(zipFilename);
+        var zipOut = new ZipOutputStream(fileOut);
+        var fileIn = new FileInputStream(srcFile)
     ) {
       var zipEntry = new ZipEntry(srcFile.getName());
       zipOut.putNextEntry(zipEntry);

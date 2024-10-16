@@ -32,7 +32,7 @@ public class LinearSearchSnippet {
   /**
    * Search an item with linearSearch algorithm.
    *
-   * @param arr array to search
+   * @param arr  array to search
    * @param item an item to search
    * @return if item is found, return the index position of the array item otherwise return -1
    */

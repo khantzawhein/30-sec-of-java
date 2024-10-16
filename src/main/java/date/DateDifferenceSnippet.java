@@ -32,17 +32,17 @@ import java.time.temporal.ChronoUnit;
  */
 
 public class DateDifferenceSnippet {
-    private DateDifferenceSnippet() {
-    }
+  private DateDifferenceSnippet() {
+  }
 
   /**
-  * This function calculates the number of years between two LocalDate objects.
-  * If the result is negative, it returns the absolute value of the difference.
-  *
-  * @param firstTime  The first LocalDate object representing the starting date
-  * @param secondTime The second LocalDate object representing the ending date
-  * @return The number of years between the two LocalDate objects as a long data type
-  */
+   * This function calculates the number of years between two LocalDate objects.
+   * If the result is negative, it returns the absolute value of the difference.
+   *
+   * @param firstTime  The first LocalDate object representing the starting date
+   * @param secondTime The second LocalDate object representing the ending date
+   * @return The number of years between the two LocalDate objects as a long data type
+   */
   public static long getYearsDifference(LocalDate firstTime, LocalDate secondTime) {
     var yearsDifference = ChronoUnit.YEARS.between(firstTime, secondTime);
     return Math.abs(yearsDifference);

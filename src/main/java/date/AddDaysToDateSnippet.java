@@ -35,10 +35,11 @@ public class AddDaysToDateSnippet {
 
   private AddDaysToDateSnippet() {
   }
+
   /**
    * Add days to given date.
    *
-   * @param date given date
+   * @param date     given date
    * @param noOfDays number of days to add
    * @return modified date
    */
@@ -55,7 +56,7 @@ public class AddDaysToDateSnippet {
   /**
    * Add days to local date.
    *
-   * @param date given local date
+   * @param date     given local date
    * @param noOfDays number of days to add
    * @return modified date
    */

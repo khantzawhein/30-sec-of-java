@@ -34,8 +34,24 @@ public class DiceThrow {
   static SecureRandom random = new SecureRandom();
 
   /**
-  * Enum for standardized sided dice (4,6,8,10,12 and 20).
-  */
+   * Returns the sum of sides for the given number of sides of each dice.
+   *
+   * @param noOfDice number of dice
+   * @param sides    sides of a dice
+   * @return int sum of sides for number of dice
+   */
+  public static int throwDice(int noOfDice, DiceSides sides) {
+
+    int sum = 0;
+    for (int i = 0; i < noOfDice; i++) {
+      sum = sum + (1 + random.nextInt(sides.getDiceSides()));
+    }
+    return sum;
+  }
+
+  /**
+   * Enum for standardized sided dice (4,6,8,10,12 and 20).
+   */
   public enum DiceSides {
 
     FOUR(4), SIX(6), EIGHT(8), TEN(10), TWELVE(12), TWENTY(20);
@@ -55,21 +71,5 @@ public class DiceThrow {
       return this.diSides;
     }
 
-  }
-
-  /**
-  * Returns the sum of sides for the given number of sides of each dice.
-  *
-  * @param noOfDice number of dice
-  * @param sides sides of a dice
-  * @return int sum of sides for number of dice
-  */
-  public static int throwDice(int noOfDice, DiceSides sides) {
-
-    int sum = 0;
-    for (int i = 0; i < noOfDice; i++) {
-      sum = sum + (1 + random.nextInt(sides.getDiceSides()));
-    }
-    return sum;
   }
 }

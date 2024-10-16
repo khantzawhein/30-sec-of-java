@@ -32,7 +32,7 @@ public class MaxCharacterCountSnippet {
   /**
    * The maximum count of times a specific character appears in a string.
    *
-   * @param str َA specific string
+   * @param str       َA specific string
    * @param character A specific character
    * @return the maximum count of one character
    */

@@ -29,32 +29,32 @@ package array;
  */
 public class ArrayModeSnippet {
 
-    private ArrayModeSnippet() {
-    }
+  private ArrayModeSnippet() {
+  }
 
-    /**
-     * Returns the mode of the array.
-     *
-     * @param arr array to find mode in it
-     * @return mode of array
-     */
-    public static int modeArray(int[] arr) {
-        int mode = 0;
-        int maxcount = 0;
+  /**
+   * Returns the mode of the array.
+   *
+   * @param arr array to find mode in it
+   * @return mode of array
+   */
+  public static int modeArray(int[] arr) {
+    int mode = 0;
+    int maxcount = 0;
 
-        for (int i = 0; i < arr.length; i++) {
-            int count = 0;
+    for (int i = 0; i < arr.length; i++) {
+      int count = 0;
 
-            for (int j = 0; j < arr.length; j++) {
-                if (arr[i] == arr[j]) {
-                    count++;
-                }
-            }
-            if (count > maxcount) {
-                maxcount = count;
-                mode = arr[i];
-            }
+      for (int j = 0; j < arr.length; j++) {
+        if (arr[i] == arr[j]) {
+          count++;
         }
-        return mode;
+      }
+      if (count > maxcount) {
+        maxcount = count;
+        mode = arr[i];
+      }
     }
+    return mode;
+  }
 }

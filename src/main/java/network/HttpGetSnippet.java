@@ -47,8 +47,8 @@ public class HttpGetSnippet {
   public static HttpResponse<String> httpGet(String uri) throws IOException, InterruptedException {
     var client = HttpClient.newHttpClient();
     var request = HttpRequest.newBuilder()
-            .uri(URI.create(uri))
-            .build();
+        .uri(URI.create(uri))
+        .build();
     return client.send(request, HttpResponse.BodyHandlers.ofString());
   }
 }

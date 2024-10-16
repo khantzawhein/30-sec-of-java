@@ -30,8 +30,8 @@ import java.util.Arrays;
  * CountingSortSnippet.
  */
 public class CountingSortSnippet {
-    private CountingSortSnippet() {
-    }
+  private CountingSortSnippet() {
+  }
 
   /**
    * Sort an array having zero or positive numbers with countingSort algorithm.

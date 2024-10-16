@@ -28,8 +28,8 @@ package algorithm;
  * BubbleSortSnippet.
  */
 public class BubbleSortSnippet {
-    private BubbleSortSnippet() {
-    }
+  private BubbleSortSnippet() {
+  }
 
   /**
    * Sort an array with bubbleSort algorithm.

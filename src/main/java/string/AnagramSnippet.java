@@ -51,7 +51,7 @@ public class AnagramSnippet {
 
     var arr1 = new int[256];
     var arr2 = new int[256];
-    
+
     for (var i = 0; i < l1; i++) {
       arr1[s1.charAt(i)]++;
       arr2[s2.charAt(i)]++;

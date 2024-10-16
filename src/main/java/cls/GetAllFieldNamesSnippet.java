@@ -34,8 +34,8 @@ import java.util.List;
  */
 public class GetAllFieldNamesSnippet {
 
-    private GetAllFieldNamesSnippet() {
-    }
+  private GetAllFieldNamesSnippet() {
+  }
 
   /**
    * Print all declared field names of the class or the interface the class extends.
