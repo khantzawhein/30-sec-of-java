@@ -32,18 +32,18 @@ import java.util.List;
  * GetAllMethodsSnippet.
  */
 public class GetAllMethodsSnippet {
-  private GetAllMethodsSnippet() {
-  }
+    private GetAllMethodsSnippet() {
+    }
 
-  /**
-   * Print all declared methods of the class.
-   *
-   * @param cls Tested class
-   * @return list of methods name
-   */
-  public static List<String> getAllMethods(final Class<?> cls) {
-    return Arrays.stream(cls.getDeclaredMethods())
-        .map(Method::getName)
-        .toList();
-  }
+    /**
+     * Print all declared methods of the class.
+     *
+     * @param cls Tested class
+     * @return list of methods name
+     */
+    public static List<String> getAllMethods(final Class<?> cls) {
+        return Arrays.stream(cls.getDeclaredMethods())
+            .map(Method::getName)
+            .toList();
+    }
 }

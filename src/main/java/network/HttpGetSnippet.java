@@ -35,20 +35,20 @@ import java.net.http.HttpResponse;
  */
 public class HttpGetSnippet {
 
-  private HttpGetSnippet() {
-  }
+    private HttpGetSnippet() {
+    }
 
-  /**
-   * Performs HTTP GET request.
-   *
-   * @param uri the URI of the connection
-   * @return response object
-   */
-  public static HttpResponse<String> httpGet(String uri) throws IOException, InterruptedException {
-    var client = HttpClient.newHttpClient();
-    var request = HttpRequest.newBuilder()
-        .uri(URI.create(uri))
-        .build();
-    return client.send(request, HttpResponse.BodyHandlers.ofString());
-  }
+    /**
+     * Performs HTTP GET request.
+     *
+     * @param uri the URI of the connection
+     * @return response object
+     */
+    public static HttpResponse<String> httpGet(String uri) throws IOException, InterruptedException {
+        var client = HttpClient.newHttpClient();
+        var request = HttpRequest.newBuilder()
+            .uri(URI.create(uri))
+            .build();
+        return client.send(request, HttpResponse.BodyHandlers.ofString());
+    }
 }

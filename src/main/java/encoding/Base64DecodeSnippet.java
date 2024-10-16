@@ -30,16 +30,16 @@ import java.util.Base64;
  * Base64DecodeSnippet.
  */
 public class Base64DecodeSnippet {
-  private Base64DecodeSnippet() {
-  }
+    private Base64DecodeSnippet() {
+    }
 
-  /**
-   * Decodes a Base64 encoded string to the actual representation.
-   *
-   * @param input base64 encoded string
-   * @return decoded string
-   */
-  public static String decodeBase64(String input) {
-    return new String(Base64.getDecoder().decode(input.getBytes()));
-  }
+    /**
+     * Decodes a Base64 encoded string to the actual representation.
+     *
+     * @param input base64 encoded string
+     * @return decoded string
+     */
+    public static String decodeBase64(String input) {
+        return new String(Base64.getDecoder().decode(input.getBytes()));
+    }
 }

@@ -24,26 +24,27 @@
 
 package string;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 import java.text.ParseException;
 import java.util.Calendar;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class StringToDateSnippetTest {
-  /**
-   * Tests for {@link StringToDateSnippet#stringToDate(String, String)}.
-   */
-  @Test
-  void testStringToDate() throws ParseException {
-    var calendar = Calendar.getInstance();
-    calendar.setTime(StringToDateSnippet.stringToDate("2017-08-18", "yyyy-MM-dd"));
-    assertEquals(2017, calendar.get(Calendar.YEAR));
-    assertEquals(8, calendar.get(Calendar.MONTH) + 1);
-    assertEquals(18, calendar.get(Calendar.DAY_OF_MONTH));
-  }
+    /**
+     * Tests for {@link StringToDateSnippet#stringToDate(String, String)}.
+     */
+    @Test
+    void testStringToDate() throws ParseException {
+        var calendar = Calendar.getInstance();
+        calendar.setTime(StringToDateSnippet.stringToDate("2017-08-18", "yyyy-MM-dd"));
+        assertEquals(2017, calendar.get(Calendar.YEAR));
+        assertEquals(8, calendar.get(Calendar.MONTH) + 1);
+        assertEquals(18, calendar.get(Calendar.DAY_OF_MONTH));
+    }
 }

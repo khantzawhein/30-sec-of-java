@@ -24,30 +24,30 @@
 
 package encoding;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class Base64DecodeSnippetTest {
-  /**
-   * Tests for {@link Base64DecodeSnippet#decodeBase64(String)}.
-   */
-  @Test
-  void testBase64Decoding() {
-    var decodedString = Base64DecodeSnippet.decodeBase64("VGVzdFN0cmluZw==");
-    assertEquals("TestString", decodedString);
-  }
+    /**
+     * Tests for {@link Base64DecodeSnippet#decodeBase64(String)}.
+     */
+    @Test
+    void testBase64Decoding() {
+        var decodedString = Base64DecodeSnippet.decodeBase64("VGVzdFN0cmluZw==");
+        assertEquals("TestString", decodedString);
+    }
 
-  /**
-   * Tests for {@link Base64DecodeSnippet#decodeBase64(String)} with empty input.
-   */
-  @Test
-  void testEmptyBase64Decoding() {
-    var decodedString = Base64DecodeSnippet.decodeBase64("");
-    assertEquals("", decodedString);
-  }
+    /**
+     * Tests for {@link Base64DecodeSnippet#decodeBase64(String)} with empty input.
+     */
+    @Test
+    void testEmptyBase64Decoding() {
+        var decodedString = Base64DecodeSnippet.decodeBase64("");
+        assertEquals("", decodedString);
+    }
 }

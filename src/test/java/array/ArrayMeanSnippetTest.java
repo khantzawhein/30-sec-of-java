@@ -24,21 +24,21 @@
 
 package array;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Tests for 30 Seconds of Java code library.
  */
 class ArrayMeanSnippetTest {
 
-  /**
-   * Tests for {@link ArrayMeanSnippet#arrayMean(int[])}.
-   */
-  @Test
-  void testArrayMean() {
-    assertEquals(4.7, ArrayMeanSnippet.arrayMean(new int[]{10, 9, 4, 1, 3, -11, 20, 6, 2, 3}));
-    assertEquals(-62.75, ArrayMeanSnippet.arrayMean(new int[]{-30, -31, -63, -127}));
-  }
+    /**
+     * Tests for {@link ArrayMeanSnippet#arrayMean(int[])}.
+     */
+    @Test
+    void testArrayMean() {
+        assertEquals(4.7, ArrayMeanSnippet.arrayMean(new int[]{10, 9, 4, 1, 3, -11, 20, 6, 2, 3}));
+        assertEquals(-62.75, ArrayMeanSnippet.arrayMean(new int[]{-30, -31, -63, -127}));
+    }
 }

@@ -24,23 +24,23 @@
 
 package array;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
- 
 import org.junit.jupiter.api.Test;
- 
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /*
-  * Tests for 30 Seconds of Java code library
-  *
-  */
+ * Tests for 30 Seconds of Java code library
+ *
+ */
 class FindMinSnippetTest {
-  /**
-    * Tests for {@link FindMinSnippet#findMin(int[])}.
-    */
-  @Test
-   void test_findMin() {
-    assertEquals(1, FindMinSnippet.findMin(new int[] {1, 2, 4, 9, 8, 1}));
-    assertEquals(-65, FindMinSnippet.findMin(new int[] {-43, -23, -51, -10, -8, -65, -9}));
-    assertEquals(-4, FindMinSnippet.findMin(new int[] {-4, -3, -2, -1, 0}));
-    assertEquals(1, FindMinSnippet.findMin(new int[] {1, 1, 1, 1, 1, 1})); 
-  }
+    /**
+     * Tests for {@link FindMinSnippet#findMin(int[])}.
+     */
+    @Test
+    void test_findMin() {
+        assertEquals(1, FindMinSnippet.findMin(new int[]{1, 2, 4, 9, 8, 1}));
+        assertEquals(-65, FindMinSnippet.findMin(new int[]{-43, -23, -51, -10, -8, -65, -9}));
+        assertEquals(-4, FindMinSnippet.findMin(new int[]{-4, -3, -2, -1, 0}));
+        assertEquals(1, FindMinSnippet.findMin(new int[]{1, 1, 1, 1, 1, 1}));
+    }
 }

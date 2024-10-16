@@ -29,25 +29,25 @@ package string;
  */
 public class MaxCharacterCountSnippet {
 
-  /**
-   * The maximum count of times a specific character appears in a string.
-   *
-   * @param str       َA specific string
-   * @param character A specific character
-   * @return the maximum count of one character
-   */
+    /**
+     * The maximum count of times a specific character appears in a string.
+     *
+     * @param str       َA specific string
+     * @param character A specific character
+     * @return the maximum count of one character
+     */
 
-  public static int getMaxCharacterCount(String str, char character) {
-    int characterCount = 0;
-    int maxCharacterCount = 0;
-    for (int i = 0; i < str.length(); i++) {
-      if ((str.charAt(i)) == character) {
-        characterCount++;
-        maxCharacterCount = Math.max(maxCharacterCount, characterCount);
-      } else {
-        characterCount = 0;
-      }
+    public static int getMaxCharacterCount(String str, char character) {
+        int characterCount = 0;
+        int maxCharacterCount = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if ((str.charAt(i)) == character) {
+                characterCount++;
+                maxCharacterCount = Math.max(maxCharacterCount, characterCount);
+            } else {
+                characterCount = 0;
+            }
+        }
+        return maxCharacterCount;
     }
-    return maxCharacterCount;
-  }
 }

@@ -32,18 +32,18 @@ import java.util.List;
  * GetAllPublicFieldNamesSnippet.
  */
 public class GetAllPublicFieldNamesSnippet {
-  private GetAllPublicFieldNamesSnippet() {
-  }
+    private GetAllPublicFieldNamesSnippet() {
+    }
 
-  /**
-   * Print all declared public field names of the class or the interface the class extends.
-   *
-   * @param clazz Tested class
-   * @return list of name of public fields
-   */
-  public static List<String> getAllPublicFieldNames(final Class<?> clazz) {
-    return Arrays.stream(clazz.getFields())
-        .map(Field::getName)
-        .toList();
-  }
+    /**
+     * Print all declared public field names of the class or the interface the class extends.
+     *
+     * @param clazz Tested class
+     * @return list of name of public fields
+     */
+    public static List<String> getAllPublicFieldNames(final Class<?> clazz) {
+        return Arrays.stream(clazz.getFields())
+            .map(Field::getName)
+            .toList();
+    }
 }

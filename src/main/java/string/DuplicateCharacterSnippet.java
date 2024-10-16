@@ -31,22 +31,22 @@ import java.util.Set;
  * DuplicateCharacterSnippet.
  */
 public class DuplicateCharacterSnippet {
-  private DuplicateCharacterSnippet() {
-  }
-
-  /**
-   * Remove Duplicate Characters from a string.
-   *
-   * @param str The string to be processed
-   * @return A string with no duplicate characters
-   */
-
-  public static String removeDuplicateCharacters(String str) {
-    char[] charsOfStr = str.toCharArray();
-    Set<String> uniqueCharacters = new HashSet<>();
-    for (char character : charsOfStr) {
-      uniqueCharacters.add(String.valueOf(character));
+    private DuplicateCharacterSnippet() {
     }
-    return String.join("", uniqueCharacters);
-  }
+
+    /**
+     * Remove Duplicate Characters from a string.
+     *
+     * @param str The string to be processed
+     * @return A string with no duplicate characters
+     */
+
+    public static String removeDuplicateCharacters(String str) {
+        char[] charsOfStr = str.toCharArray();
+        Set<String> uniqueCharacters = new HashSet<>();
+        for (char character : charsOfStr) {
+            uniqueCharacters.add(String.valueOf(character));
+        }
+        return String.join("", uniqueCharacters);
+    }
 }

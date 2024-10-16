@@ -24,21 +24,21 @@
 
 package file;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class ListAllFilesSnippetTest {
-  /**
-   * Tests for {@link ListAllFilesSnippet#listAllFiles(String)}.
-   */
-  @Test
-  void testListAllFiles() {
-    var files = ListAllFilesSnippet.listAllFiles("src/test/resources");
-    assertEquals(6, files.size());
-  }
+    /**
+     * Tests for {@link ListAllFilesSnippet#listAllFiles(String)}.
+     */
+    @Test
+    void testListAllFiles() {
+        var files = ListAllFilesSnippet.listAllFiles("src/test/resources");
+        assertEquals(6, files.size());
+    }
 }

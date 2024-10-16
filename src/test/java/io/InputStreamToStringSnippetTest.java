@@ -24,38 +24,36 @@
 
 package io;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class InputStreamToStringSnippetTest {
-  /**
-   * Tests for {@link InputStreamToStringSnippet#inputStreamToString(InputStream)}.
-   */
-  @Test
-  void testInputStreamToString() throws IOException {
-    String newLine = System.getProperty("line.separator");
-    String str = new StringBuilder()
-            .append("ąćśź").append(newLine)
-            .append("←≠²³¢²€").append(newLine)
-            .append("июля").append(newLine)
-            .append("åøä").append(newLine)
-            .append("ñí").append(newLine)
-            .append("7月15日起").append(newLine)
-            .append("خەيرلىك ئەتىگەن!")
-            .toString();
-    assertEquals(str, InputStreamToStringSnippet.inputStreamToString(
+    /**
+     * Tests for {@link InputStreamToStringSnippet#inputStreamToString(InputStream)}.
+     */
+    @Test
+    void testInputStreamToString() throws IOException {
+        String newLine = System.getProperty("line.separator");
+        String str = "ąćśź" + newLine +
+            "←≠²³¢²€" + newLine +
+            "июля" + newLine +
+            "åøä" + newLine +
+            "ñí" + newLine +
+            "7月15日起" + newLine +
+            "خەيرلىك ئەتىگەن!";
+        assertEquals(str, InputStreamToStringSnippet.inputStreamToString(
             new FileInputStream("src/test/resources/dir1/placeholder.txt")));
-    assertNotEquals(str.toUpperCase(), InputStreamToStringSnippet.inputStreamToString(
+        assertNotEquals(str.toUpperCase(), InputStreamToStringSnippet.inputStreamToString(
             new FileInputStream("src/test/resources/dir1/placeholder.txt")));
-  }
+    }
 }

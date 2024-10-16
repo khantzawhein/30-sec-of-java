@@ -24,33 +24,34 @@
 
 package file;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class ZipFilesSnippetTest {
-  /**
-   * Tests for {@link ZipFilesSnippet#zipFiles(String[], String)}.
-   */
-  @Test
-  void testZipFiles() throws IOException {
-    final String[] srcFilenames = {"src/test/resources/somelines.txt",
-        "src/test/resources/someotherlines.txt"
-    };
-    final var dst = "src/test/resources/multiple.zip";
-    try {
-      ZipFilesSnippet.zipFiles(srcFilenames, dst);
-      assertTrue(Files.exists(Paths.get(dst)));
-    } finally {
-      Files.deleteIfExists(new File(dst).toPath());
+    /**
+     * Tests for {@link ZipFilesSnippet#zipFiles(String[], String)}.
+     */
+    @Test
+    void testZipFiles() throws IOException {
+        final String[] srcFilenames = {"src/test/resources/somelines.txt",
+            "src/test/resources/someotherlines.txt"
+        };
+        final var dst = "src/test/resources/multiple.zip";
+        try {
+            ZipFilesSnippet.zipFiles(srcFilenames, dst);
+            assertTrue(Files.exists(Paths.get(dst)));
+        } finally {
+            Files.deleteIfExists(new File(dst).toPath());
+        }
     }
-  }
 }

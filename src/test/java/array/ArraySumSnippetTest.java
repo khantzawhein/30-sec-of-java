@@ -24,20 +24,20 @@
 
 package array;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Tests for 30 Seconds of Java code library.
  */
 class ArraySumSnippetTest {
-  /**
-   * Tests for {@link ArraySumSnippet#arraySum(int[])}.
-   */
-  @Test
-  void testArraySum() {
-    assertEquals(47, ArraySumSnippet.arraySum(new int[]{2, 9, 10, 11, 15}));
-    assertEquals(-101, ArraySumSnippet.arraySum(new int[]{1, -10, 10, -100, -2}));
-  }
+    /**
+     * Tests for {@link ArraySumSnippet#arraySum(int[])}.
+     */
+    @Test
+    void testArraySum() {
+        assertEquals(47, ArraySumSnippet.arraySum(new int[]{2, 9, 10, 11, 15}));
+        assertEquals(-101, ArraySumSnippet.arraySum(new int[]{1, -10, 10, -100, -2}));
+    }
 }

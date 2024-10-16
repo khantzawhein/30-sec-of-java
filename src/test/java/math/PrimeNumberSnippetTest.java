@@ -24,28 +24,28 @@
 
 package math;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class PrimeNumberSnippetTest {
-  /**
-   * Tests for {@link PrimeNumberSnippet#isPrime(int)}.
-   */
-  @Test
-  void testIsPrime() {
-    assertFalse(PrimeNumberSnippet.isPrime(-1));
-    assertTrue(PrimeNumberSnippet.isPrime(2));
-    assertTrue(PrimeNumberSnippet.isPrime(3));
-    assertTrue(PrimeNumberSnippet.isPrime(17));
-    assertTrue(PrimeNumberSnippet.isPrime(97));
-    assertFalse(PrimeNumberSnippet.isPrime(-1));
-    assertFalse(PrimeNumberSnippet.isPrime(4));
-    assertFalse(PrimeNumberSnippet.isPrime(100));
-  }
+    /**
+     * Tests for {@link PrimeNumberSnippet#isPrime(int)}.
+     */
+    @Test
+    void testIsPrime() {
+        assertFalse(PrimeNumberSnippet.isPrime(-1));
+        assertTrue(PrimeNumberSnippet.isPrime(2));
+        assertTrue(PrimeNumberSnippet.isPrime(3));
+        assertTrue(PrimeNumberSnippet.isPrime(17));
+        assertTrue(PrimeNumberSnippet.isPrime(97));
+        assertFalse(PrimeNumberSnippet.isPrime(-1));
+        assertFalse(PrimeNumberSnippet.isPrime(4));
+        assertFalse(PrimeNumberSnippet.isPrime(100));
+    }
 }

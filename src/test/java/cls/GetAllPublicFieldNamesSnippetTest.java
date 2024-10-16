@@ -24,29 +24,29 @@
 
 package cls;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class GetAllPublicFieldNamesSnippetTest {
-  /**
-   * Tests for {@link GetAllPublicFieldNamesSnippet#getAllPublicFieldNames(Class)}.
-   */
-  @Test
-  void testGetAllPublicFieldNames() {
-    class TestClass {
-      public int fieldOne;
-      public int fieldTwo;
-    }
+    /**
+     * Tests for {@link GetAllPublicFieldNamesSnippet#getAllPublicFieldNames(Class)}.
+     */
+    @Test
+    void testGetAllPublicFieldNames() {
+        class TestClass {
+            public int fieldOne;
+            public int fieldTwo;
+        }
 
-    var list = GetAllPublicFieldNamesSnippet.getAllPublicFieldNames(TestClass.class);
-    assertEquals(2, list.size());
-    assertTrue(list.contains("fieldOne"));
-    assertTrue(list.contains("fieldTwo"));
-  }
+        var list = GetAllPublicFieldNamesSnippet.getAllPublicFieldNames(TestClass.class);
+        assertEquals(2, list.size());
+        assertTrue(list.contains("fieldOne"));
+        assertTrue(list.contains("fieldTwo"));
+    }
 }

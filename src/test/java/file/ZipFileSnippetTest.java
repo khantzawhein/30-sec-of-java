@@ -24,31 +24,32 @@
 
 package file;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class ZipFileSnippetTest {
-  /**
-   * Tests for {@link ZipFileSnippet#zipFile(String, String)}.
-   */
-  @Test
-  void testZipFile() throws IOException {
-    final var src = "src/test/resources/somelines.txt";
-    final var dst = "src/test/resources/somelines.zip";
-    try {
-      ZipFileSnippet.zipFile(src, dst);
-      assertTrue(Files.exists(Paths.get(dst)));
-    } finally {
-      Files.deleteIfExists(new File(dst).toPath());
+    /**
+     * Tests for {@link ZipFileSnippet#zipFile(String, String)}.
+     */
+    @Test
+    void testZipFile() throws IOException {
+        final var src = "src/test/resources/somelines.txt";
+        final var dst = "src/test/resources/somelines.zip";
+        try {
+            ZipFileSnippet.zipFile(src, dst);
+            assertTrue(Files.exists(Paths.get(dst)));
+        } finally {
+            Files.deleteIfExists(new File(dst).toPath());
+        }
     }
-  }
 }

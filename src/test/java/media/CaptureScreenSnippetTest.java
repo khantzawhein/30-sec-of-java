@@ -24,34 +24,34 @@
 
 package media;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 
-import java.awt.AWTException;
-import java.awt.HeadlessException;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class CaptureScreenSnippetTest {
-  /**
-   * Tests for {@link CaptureScreenSnippet#captureScreen(String)}.
-   */
-  @Test
-  void testCaptureScreen() throws IOException, AWTException {
-    final var filename = "src/test/resources/screenshot.png";
-    try {
-      CaptureScreenSnippet.captureScreen(filename);
-      var f = new File(filename);
-      assertTrue(f.exists() && !f.isDirectory());
-    } catch (HeadlessException e) {
-      // the test runs on a computer without a screen, it is ok to fail
-    } finally {
-      Files.deleteIfExists(new File(filename).toPath());
+    /**
+     * Tests for {@link CaptureScreenSnippet#captureScreen(String)}.
+     */
+    @Test
+    void testCaptureScreen() throws IOException, AWTException {
+        final var filename = "src/test/resources/screenshot.png";
+        try {
+            CaptureScreenSnippet.captureScreen(filename);
+            var f = new File(filename);
+            assertTrue(f.exists() && !f.isDirectory());
+        } catch (HeadlessException e) {
+            // the test runs on a computer without a screen, it is ok to fail
+        } finally {
+            Files.deleteIfExists(new File(filename).toPath());
+        }
     }
-  }
 }

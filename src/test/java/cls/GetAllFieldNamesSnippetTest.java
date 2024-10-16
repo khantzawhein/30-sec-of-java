@@ -24,36 +24,36 @@
 
 package cls;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class GetAllFieldNamesSnippetTest {
-  /**
-   *  Tests for {@link GetAllFieldNamesSnippet#getAllFieldNames(Class)}.
-   */
-  @Test
-  void testGetAllFieldNames() {
-    class SuperClass {
+    /**
+     * Tests for {@link GetAllFieldNamesSnippet#getAllFieldNames(Class)}.
+     */
+    @Test
+    void testGetAllFieldNames() {
+        class SuperClass {
 
-        SuperClass() {
+            SuperClass() {
+            }
         }
+
+        class TestClass extends SuperClass {
+
+        }
+
+        var list = GetAllFieldNamesSnippet.getAllFieldNames(TestClass.class);
+        assertEquals(4, list.size());
+        assertTrue(list.contains("fieldOne"));
+        assertTrue(list.contains("fieldTwo"));
+        assertTrue(list.contains("superFieldOne"));
+        assertTrue(list.contains("superFieldTwo"));
     }
-
-    class TestClass extends SuperClass {
-
-    }
-
-    var list = GetAllFieldNamesSnippet.getAllFieldNames(TestClass.class);
-    assertEquals(4, list.size());
-    assertTrue(list.contains("fieldOne"));
-    assertTrue(list.contains("fieldTwo"));
-    assertTrue(list.contains("superFieldOne"));
-    assertTrue(list.contains("superFieldTwo"));
-  }
 }

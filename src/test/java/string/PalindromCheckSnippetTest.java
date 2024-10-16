@@ -24,25 +24,25 @@
 
 package string;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class PalindromCheckSnippetTest {
-  /**
-   * Tests for {@link PalindromCheckSnippet#isPalindrome(String)}.
-   */
-  @Test
-  void testIsPalindrome() {
-    assertTrue(PalindromCheckSnippet.isPalindrome("saippuakauppias"));
-    // non-letter characters are skipped
-    assertTrue(PalindromCheckSnippet.isPalindrome("111 Saippua - Kauppias 321"));
-    assertFalse(PalindromCheckSnippet.isPalindrome("Type O Negative"));
-    assertFalse(PalindromCheckSnippet.isPalindrome("Foo12121Bar"));
-  }
+    /**
+     * Tests for {@link PalindromCheckSnippet#isPalindrome(String)}.
+     */
+    @Test
+    void testIsPalindrome() {
+        assertTrue(PalindromCheckSnippet.isPalindrome("saippuakauppias"));
+        // non-letter characters are skipped
+        assertTrue(PalindromCheckSnippet.isPalindrome("111 Saippua - Kauppias 321"));
+        assertFalse(PalindromCheckSnippet.isPalindrome("Type O Negative"));
+        assertFalse(PalindromCheckSnippet.isPalindrome("Foo12121Bar"));
+    }
 }

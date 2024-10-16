@@ -35,14 +35,14 @@ import java.util.stream.Collectors;
  */
 public class InputStreamToStringSnippet {
 
-  /**
-   * Convert InputStream to String.
-   *
-   * @param inputStream InputStream to convert
-   * @return String
-   */
-  public static String inputStreamToString(InputStream inputStream) {
-    return new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))
-        .lines().collect(Collectors.joining(System.lineSeparator()));
-  }
+    /**
+     * Convert InputStream to String.
+     *
+     * @param inputStream InputStream to convert
+     * @return String
+     */
+    public static String inputStreamToString(InputStream inputStream) {
+        return new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))
+            .lines().collect(Collectors.joining(System.lineSeparator()));
+    }
 }

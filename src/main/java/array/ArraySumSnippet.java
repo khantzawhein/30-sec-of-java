@@ -30,16 +30,16 @@ import java.util.Arrays;
  * ArraySumSnippet.
  */
 public class ArraySumSnippet {
-  private ArraySumSnippet() {
-  }
+    private ArraySumSnippet() {
+    }
 
-  /**
-   * Returns sum of the integers in the array.
-   *
-   * @param arr the array of integers (not null)
-   * @return the sum of the elements from the array
-   */
-  public static int arraySum(int[] arr) {
-    return Arrays.stream(arr).sum();
-  }
+    /**
+     * Returns sum of the integers in the array.
+     *
+     * @param arr the array of integers (not null)
+     * @return the sum of the elements from the array
+     */
+    public static int arraySum(int[] arr) {
+        return Arrays.stream(arr).sum();
+    }
 }

@@ -24,25 +24,26 @@
 
 package io;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class ReadFileSnippetTest {
-  /**
-   * Tests for {@link ReadFileSnippet#readFile(String)}.
-   */
-  @Test
-  void testReadFile() throws FileNotFoundException {
-    assertEquals("foo", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(0));
-    assertEquals("bar", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(1));
-    assertEquals("baz", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(2));
-    assertNotEquals("abc", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(1));
-  }
+    /**
+     * Tests for {@link ReadFileSnippet#readFile(String)}.
+     */
+    @Test
+    void testReadFile() throws FileNotFoundException {
+        assertEquals("foo", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(0));
+        assertEquals("bar", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(1));
+        assertEquals("baz", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(2));
+        assertNotEquals("abc", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(1));
+    }
 }

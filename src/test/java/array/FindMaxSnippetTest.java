@@ -24,23 +24,23 @@
 
 package array;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class FindMaxSnippetTest {
-  /**
-   * Tests for {@link FindMaxSnippet#findMax(int[])}.
-   */
-  @Test
-  void test_findMax() {
-    assertEquals(9, FindMaxSnippet.findMax(new int[] {1, 2, 4, 9, 8, 1}));
-    assertEquals(-8, FindMaxSnippet.findMax(new int[] {-43, -23, -51, -10, -8, -65, -9}));
-    assertEquals(0, FindMaxSnippet.findMax(new int[] {-4, -3, -2, -1, 0}));
-    assertEquals(1, FindMaxSnippet.findMax(new int[] {1, 1, 1, 1, 1, 1}));
-  }
+    /**
+     * Tests for {@link FindMaxSnippet#findMax(int[])}.
+     */
+    @Test
+    void test_findMax() {
+        assertEquals(9, FindMaxSnippet.findMax(new int[]{1, 2, 4, 9, 8, 1}));
+        assertEquals(-8, FindMaxSnippet.findMax(new int[]{-43, -23, -51, -10, -8, -65, -9}));
+        assertEquals(0, FindMaxSnippet.findMax(new int[]{-4, -3, -2, -1, 0}));
+        assertEquals(1, FindMaxSnippet.findMax(new int[]{1, 1, 1, 1, 1, 1}));
+    }
 }

@@ -24,29 +24,30 @@
 
 package network;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.HashMap;
-import org.junit.jupiter.api.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class HttpPostSnippetTest {
-  /**
-   * Tests for {@link HttpPostSnippet#httpPost(String, HashMap)}.
-   */
-  @Test
-  void testHttpPost() throws IOException, InterruptedException {
-    HashMap<String, String> arguments = new HashMap<>();
-    arguments.put("data", "Hello World");
-    var result = HttpPostSnippet.httpPost("https://postman-echo.com/post", arguments);
-    //This postman endpoint echoes the HTTP headers, request parameters, the contents
-    //of the request body and the complete URI requested.
-    var echoedData = "\"data\": \"Hello World\"";
-    assertThat(result.body(), containsString(echoedData));
-  }
+    /**
+     * Tests for {@link HttpPostSnippet#httpPost(String, HashMap)}.
+     */
+    @Test
+    void testHttpPost() throws IOException, InterruptedException {
+        HashMap<String, String> arguments = new HashMap<>();
+        arguments.put("data", "Hello World");
+        var result = HttpPostSnippet.httpPost("https://postman-echo.com/post", arguments);
+        //This postman endpoint echoes the HTTP headers, request parameters, the contents
+        //of the request body and the complete URI requested.
+        var echoedData = "\"data\": \"Hello World\"";
+        assertThat(result.body(), containsString(echoedData));
+    }
 }

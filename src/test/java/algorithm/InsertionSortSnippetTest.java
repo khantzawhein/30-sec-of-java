@@ -24,37 +24,37 @@
 
 package algorithm;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
-import org.junit.jupiter.api.Test;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class InsertionSortSnippetTest {
-  /**
-   * Tests for {@link InsertionSortSnippet#insertionSort(int[])}.
-   */
-  @Test
-  void testInsertionSort() {
-    var arr = new int[] {6, 3, 1, 5, 4, 2};
-    InsertionSortSnippet.insertionSort(arr);
-    assertEquals(6, arr.length);
-    assertEquals(1, arr[0]);
-    assertEquals(2, arr[1]);
-    assertEquals(3, arr[2]);
-    assertEquals(4, arr[3]);
-    assertEquals(5, arr[4]);
-    assertEquals(6, arr[5]);
+    /**
+     * Tests for {@link InsertionSortSnippet#insertionSort(int[])}.
+     */
+    @Test
+    void testInsertionSort() {
+        var arr = new int[]{6, 3, 1, 5, 4, 2};
+        InsertionSortSnippet.insertionSort(arr);
+        assertEquals(6, arr.length);
+        assertEquals(1, arr[0]);
+        assertEquals(2, arr[1]);
+        assertEquals(3, arr[2]);
+        assertEquals(4, arr[3]);
+        assertEquals(5, arr[4]);
+        assertEquals(6, arr[5]);
 
-    assertNotEquals(7, arr.length);
-    assertNotEquals(2, arr[0]);
-    assertNotEquals(3, arr[1]);
-    assertNotEquals(4, arr[2]);
-    assertNotEquals(5, arr[3]);
-    assertNotEquals(6, arr[4]);
-    assertNotEquals(7, arr[5]);
-  }
+        assertNotEquals(7, arr.length);
+        assertNotEquals(2, arr[0]);
+        assertNotEquals(3, arr[1]);
+        assertNotEquals(4, arr[2]);
+        assertNotEquals(5, arr[3]);
+        assertNotEquals(6, arr[4]);
+        assertNotEquals(7, arr[5]);
+    }
 }

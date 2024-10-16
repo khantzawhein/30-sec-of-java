@@ -24,60 +24,59 @@
 
 package file;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.zip.ZipFile;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class ZipDirectorySnippetTest {
-  /**
-   * Tests for {@link ZipDirectorySnippet#zipDirectory(String, String)}.
-   */
-  @Test
-  void testZipFileDirectory() throws IOException {
-    final var src = "src/test/resources/dir3";
-    final var dst = "src/test/resources/dir3.zip";
-    try {
-      ZipDirectorySnippet.zipDirectory(src, dst);
-      assertTrue(Files.exists(Paths.get(dst)));
-      var zipFile = new ZipFile(Paths.get(dst).toFile());
-      var regularFiles = 0;
-      var directories = 0;
-      var zipEntries = zipFile.entries();
-      while (zipEntries.hasMoreElements()) {
-        if (zipEntries.nextElement().isDirectory()) {
-          directories++;
-        } else {
-          regularFiles++;
+    /**
+     * Tests for {@link ZipDirectorySnippet#zipDirectory(String, String)}.
+     */
+    @Test
+    void testZipFileDirectory() throws IOException {
+        final var src = "src/test/resources/dir3";
+        final var dst = "src/test/resources/dir3.zip";
+        try {
+            ZipDirectorySnippet.zipDirectory(src, dst);
+            assertTrue(Files.exists(Paths.get(dst)));
+            var zipFile = new ZipFile(Paths.get(dst).toFile());
+            var regularFiles = 0;
+            var directories = 0;
+            var zipEntries = zipFile.entries();
+            while (zipEntries.hasMoreElements()) {
+                if (zipEntries.nextElement().isDirectory()) {
+                    directories++;
+                } else {
+                    regularFiles++;
+                }
+            }
+            assertEquals(4, zipFile.size());
+            assertEquals(2, directories); // The root directory + inner directory
+            assertEquals(2, regularFiles); // Two simple files
+            zipFile.close();
+        } finally {
+            Files.deleteIfExists(new File(dst).toPath());
         }
-      }
-      assertEquals(4, zipFile.size());
-      assertEquals(2, directories); // The root directory + inner directory
-      assertEquals(2, regularFiles); // Two simple files
-      zipFile.close();
-    } finally {
-      Files.deleteIfExists(new File(dst).toPath());
     }
-  }
 
-  @Test()
-  void testZipFileDirectoryInvalid() throws IOException {
+    @Test()
+    void testZipFileDirectoryInvalid() throws IOException {
 
-    final var src = "src/test/resources/dirUnknown";
-    final var dst = "src/test/resources/dirUnknown.zip";
-    assertThrows(IOException.class, () -> {
-      ZipDirectorySnippet.zipDirectory(src, dst);
-    });
-    Files.deleteIfExists(new File(dst).toPath());
-  }
+        final var src = "src/test/resources/dirUnknown";
+        final var dst = "src/test/resources/dirUnknown.zip";
+        assertThrows(IOException.class, () -> {
+            ZipDirectorySnippet.zipDirectory(src, dst);
+        });
+        Files.deleteIfExists(new File(dst).toPath());
+    }
 }

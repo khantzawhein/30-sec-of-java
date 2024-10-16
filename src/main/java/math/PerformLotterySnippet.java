@@ -32,19 +32,19 @@ import java.util.Collections;
  */
 public class PerformLotterySnippet {
 
-  /**
-   * Generate random lottery numbers.
-   *
-   * @param numNumbers    how many performLottery numbers are available (e.g. 49)
-   * @param numbersToPick how many numbers the player needs to pick (e.g. 6)
-   * @return array with the random numbers
-   */
-  public static Integer[] performLottery(int numNumbers, int numbersToPick) {
-    var numbers = new ArrayList<Integer>();
-    for (var i = 0; i < numNumbers; i++) {
-      numbers.add(i + 1);
+    /**
+     * Generate random lottery numbers.
+     *
+     * @param numNumbers    how many performLottery numbers are available (e.g. 49)
+     * @param numbersToPick how many numbers the player needs to pick (e.g. 6)
+     * @return array with the random numbers
+     */
+    public static Integer[] performLottery(int numNumbers, int numbersToPick) {
+        var numbers = new ArrayList<Integer>();
+        for (var i = 0; i < numNumbers; i++) {
+            numbers.add(i + 1);
+        }
+        Collections.shuffle(numbers);
+        return numbers.subList(0, numbersToPick).toArray(new Integer[numbersToPick]);
     }
-    Collections.shuffle(numbers);
-    return numbers.subList(0, numbersToPick).toArray(new Integer[numbersToPick]);
-  }
 }

@@ -24,9 +24,10 @@
 
 package algorithm;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /*
  * Tests for 30 Seconds of Java code library
@@ -34,32 +35,32 @@ import org.junit.jupiter.api.Test;
  */
 
 class SieveOfEratosthenesSnippetTest {
-  /**
-   * Tests for {@link SieveOfEratosthenesSnippet (int)}.
-   */  
+    /**
+     * Tests for {@link SieveOfEratosthenesSnippet (int)}.
+     */
 
-  @Test
-  void testSieveOfEratosthenes() {
-    boolean[] arr = SieveOfEratosthenesSnippet.sieveOfEratosthenes(4);
-    assertEquals(true, arr[0]);
-    assertEquals(true, arr[1]);
-    assertEquals(true, arr[2]);
-    assertEquals(true, arr[3]);
-    assertEquals(false, arr[4]);
+    @Test
+    void testSieveOfEratosthenes() {
+        boolean[] arr = SieveOfEratosthenesSnippet.sieveOfEratosthenes(4);
+        assertTrue(arr[0]);
+        assertTrue(arr[1]);
+        assertTrue(arr[2]);
+        assertTrue(arr[3]);
+        assertFalse(arr[4]);
 
-    boolean[] arr2 = SieveOfEratosthenesSnippet.sieveOfEratosthenes(7);
-    assertEquals(true, arr2[0]);
-    assertEquals(true, arr2[1]);
-    assertEquals(true, arr2[2]);
-    assertEquals(true, arr2[3]);
-    assertEquals(false, arr2[4]);
-    assertEquals(true, arr2[5]);
-    assertEquals(false, arr2[6]);
-    assertEquals(true, arr2[7]);
+        boolean[] arr2 = SieveOfEratosthenesSnippet.sieveOfEratosthenes(7);
+        assertTrue(arr2[0]);
+        assertTrue(arr2[1]);
+        assertTrue(arr2[2]);
+        assertTrue(arr2[3]);
+        assertFalse(arr2[4]);
+        assertTrue(arr2[5]);
+        assertFalse(arr2[6]);
+        assertTrue(arr2[7]);
 
-    boolean[] arr3 = SieveOfEratosthenesSnippet.sieveOfEratosthenes(2);
-    assertEquals(true, arr3[0]);
-    assertEquals(true, arr3[1]);
-    assertEquals(true, arr3[2]);
-  }
+        boolean[] arr3 = SieveOfEratosthenesSnippet.sieveOfEratosthenes(2);
+        assertTrue(arr3[0]);
+        assertTrue(arr3[1]);
+        assertTrue(arr3[2]);
+    }
 }

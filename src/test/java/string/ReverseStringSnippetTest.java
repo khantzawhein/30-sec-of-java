@@ -24,21 +24,21 @@
 
 package string;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class ReverseStringSnippetTest {
-  /**
-   * Tests for {@link ReverseStringSnippet#reverseString(String)}.
-   */
-  @Test
-  void testReverseString() {
-    assertEquals("oof", ReverseStringSnippet.reverseString("foo"));
-    assertEquals("ÖÄÅ321FED cba", ReverseStringSnippet.reverseString("abc DEF123ÅÄÖ"));
-  }
+    /**
+     * Tests for {@link ReverseStringSnippet#reverseString(String)}.
+     */
+    @Test
+    void testReverseString() {
+        assertEquals("oof", ReverseStringSnippet.reverseString("foo"));
+        assertEquals("ÖÄÅ321FED cba", ReverseStringSnippet.reverseString("abc DEF123ÅÄÖ"));
+    }
 }

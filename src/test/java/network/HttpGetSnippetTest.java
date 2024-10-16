@@ -24,21 +24,21 @@
 
 package network;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class HttpGetSnippetTest {
-  /**
-   * Tests for {@link HttpGetSnippet#httpGet(String)}.
-   */
-  @Test
-  void testHttpGet() throws Exception {
-    var response = HttpGetSnippet.httpGet("http://www.google.com");
-    assertEquals(200, response.statusCode());
-  }
+    /**
+     * Tests for {@link HttpGetSnippet#httpGet(String)}.
+     */
+    @Test
+    void testHttpGet() throws Exception {
+        var response = HttpGetSnippet.httpGet("http://www.google.com");
+        assertEquals(200, response.statusCode());
+    }
 }

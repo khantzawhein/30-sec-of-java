@@ -29,20 +29,20 @@ package math;
  */
 public class GreatestCommonDivisorSnippet {
 
-  private GreatestCommonDivisorSnippet() {
-  }
-
-  /**
-   * Greatest common divisor calculation.
-   *
-   * @param a one of the numbers whose gcd is to be computed
-   * @param b other number whose gcd is to be computed
-   * @return gcd of the two numbers
-   */
-  public static int gcd(int a, int b) {
-    if (b == 0) {
-      return a;
+    private GreatestCommonDivisorSnippet() {
     }
-    return gcd(b, a % b);
-  }
+
+    /**
+     * Greatest common divisor calculation.
+     *
+     * @param a one of the numbers whose gcd is to be computed
+     * @param b other number whose gcd is to be computed
+     * @return gcd of the two numbers
+     */
+    public static int gcd(int a, int b) {
+        if (b == 0) {
+            return a;
+        }
+        return gcd(b, a % b);
+    }
 }

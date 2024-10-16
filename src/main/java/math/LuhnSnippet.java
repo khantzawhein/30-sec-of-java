@@ -29,36 +29,36 @@ package math;
  */
 public class LuhnSnippet {
 
-  /**
-   * Calculates checksum for a given number with Luhn's algorithm. Works only on non-negative
-   * integers not greater than {@link Long#MAX_VALUE} i.e., all numbers with a maximum of 18
-   * digits, plus 19-digit-long numbers start with 1..8 (also some with 9, too). For
-   * demonstration purposes, algorithm is not optimized for efficiency.
-   *
-   * @param num number whose checksum is to be calculated
-   * @return checksum value for num
-   * @see <a href="https://patents.google.com/patent/US2950048A">Hans P. LUHN's patent US2950048A</a>
-   * @see <a href="https://en.wikipedia.org/wiki/Luhn_algorithm">Luhn algorithm on Wikipedia</a>
-   */
-  public static int calculateLuhnChecksum(long num) {
-    if (num < 0) {
-      throw new IllegalArgumentException("Non-negative numbers only.");
+    /**
+     * Calculates checksum for a given number with Luhn's algorithm. Works only on non-negative
+     * integers not greater than {@link Long#MAX_VALUE} i.e., all numbers with a maximum of 18
+     * digits, plus 19-digit-long numbers start with 1..8 (also some with 9, too). For
+     * demonstration purposes, algorithm is not optimized for efficiency.
+     *
+     * @param num number whose checksum is to be calculated
+     * @return checksum value for num
+     * @see <a href="https://patents.google.com/patent/US2950048A">Hans P. LUHN's patent US2950048A</a>
+     * @see <a href="https://en.wikipedia.org/wiki/Luhn_algorithm">Luhn algorithm on Wikipedia</a>
+     */
+    public static int calculateLuhnChecksum(long num) {
+        if (num < 0) {
+            throw new IllegalArgumentException("Non-negative numbers only.");
+        }
+        final var numStr = String.valueOf(num);
+
+        var sum = 0;
+        var isOddPosition = true;
+        // Loop on digits of numStr from right to left.
+        for (var i = numStr.length() - 1; i >= 0; i--) {
+            final var digit = Integer.parseInt(Character.toString(numStr.charAt(i)));
+            final var substituteDigit = (isOddPosition ? 2 : 1) * digit;
+
+            final var tensPlaceDigit = substituteDigit / 10;
+            final var onesPlaceDigit = substituteDigit % 10;
+            sum += tensPlaceDigit + onesPlaceDigit;
+
+            isOddPosition = !isOddPosition;
+        }
+        return (10 - (sum % 10)) % 10;
     }
-    final var numStr = String.valueOf(num);
-
-    var sum = 0;
-    var isOddPosition = true;
-    // Loop on digits of numStr from right to left.
-    for (var i = numStr.length() - 1; i >= 0; i--) {
-      final var digit = Integer.parseInt(Character.toString(numStr.charAt(i)));
-      final var substituteDigit = (isOddPosition ? 2 : 1) * digit;
-
-      final var tensPlaceDigit = substituteDigit / 10;
-      final var onesPlaceDigit = substituteDigit % 10;
-      sum += tensPlaceDigit + onesPlaceDigit;
-
-      isOddPosition = !isOddPosition;
-    }
-    return (10 - (sum % 10)) % 10;
-  }
 }

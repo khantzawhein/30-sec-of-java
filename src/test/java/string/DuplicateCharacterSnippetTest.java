@@ -24,9 +24,9 @@
 
 package string;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 /*
@@ -35,13 +35,13 @@ import org.junit.jupiter.api.Test;
  */
 class DuplicateCharacterSnippetTest {
 
-  /**
-   * Tests for {@link DuplicateCharacterSnippet#removeDuplicateCharacters(String)}.
-   */
-  @Test
-  void testRemoveDuplicateCharacters() {
-    assertEquals("z", DuplicateCharacterSnippet.removeDuplicateCharacters("zzzzzzzzzzzzzzzzz"));
-    assertEquals("abcd", DuplicateCharacterSnippet.removeDuplicateCharacters("aabbccdd"));
-    assertEquals("1289", DuplicateCharacterSnippet.removeDuplicateCharacters("1219218181921"));
-  }
+    /**
+     * Tests for {@link DuplicateCharacterSnippet#removeDuplicateCharacters(String)}.
+     */
+    @Test
+    void testRemoveDuplicateCharacters() {
+        assertEquals("z", DuplicateCharacterSnippet.removeDuplicateCharacters("zzzzzzzzzzzzzzzzz"));
+        assertEquals("abcd", DuplicateCharacterSnippet.removeDuplicateCharacters("aabbccdd"));
+        assertEquals("1289", DuplicateCharacterSnippet.removeDuplicateCharacters("1219218181921"));
+    }
 }

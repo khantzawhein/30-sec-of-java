@@ -31,17 +31,17 @@ import java.util.Arrays;
  */
 public class AllEqualSnippet {
 
-  private AllEqualSnippet() {
-  }
+    private AllEqualSnippet() {
+    }
 
-  /**
-   * Returns true if all elements in array are equal.
-   *
-   * @param arr the array to check (not null)
-   * @param <T> the element type
-   * @return true if all elements in the array are equal
-   */
-  public static <T> boolean allEqual(T[] arr) {
-    return Arrays.stream(arr).distinct().count() == 1;
-  }
+    /**
+     * Returns true if all elements in array are equal.
+     *
+     * @param arr the array to check (not null)
+     * @param <T> the element type
+     * @return true if all elements in the array are equal
+     */
+    public static <T> boolean allEqual(T[] arr) {
+        return Arrays.stream(arr).distinct().count() == 1;
+    }
 }

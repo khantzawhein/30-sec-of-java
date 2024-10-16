@@ -24,48 +24,48 @@
 
 package math;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class FactorialSnippetTest {
-  /**
-   * Tests for {@link FactorialSnippet#factorial(int)}.
-   */
-  @Test
-  void testFactorial() {
-    assertEquals(1, FactorialSnippet.factorial(0));
-    assertEquals(1, FactorialSnippet.factorial(1));
-    assertEquals(2, FactorialSnippet.factorial(2));
-    assertEquals(6, FactorialSnippet.factorial(3));
-    assertEquals(24, FactorialSnippet.factorial(4));
-    assertEquals(120, FactorialSnippet.factorial(5));
-    assertEquals(720, FactorialSnippet.factorial(6));
-    assertEquals(5040, FactorialSnippet.factorial(7));
-    assertEquals(40320, FactorialSnippet.factorial(8));
-    assertEquals(362880, FactorialSnippet.factorial(9));
-    assertEquals(3628800, FactorialSnippet.factorial(10));
-  }
+    /**
+     * Tests for {@link FactorialSnippet#factorial(int)}.
+     */
+    @Test
+    void testFactorial() {
+        assertEquals(1, FactorialSnippet.factorial(0));
+        assertEquals(1, FactorialSnippet.factorial(1));
+        assertEquals(2, FactorialSnippet.factorial(2));
+        assertEquals(6, FactorialSnippet.factorial(3));
+        assertEquals(24, FactorialSnippet.factorial(4));
+        assertEquals(120, FactorialSnippet.factorial(5));
+        assertEquals(720, FactorialSnippet.factorial(6));
+        assertEquals(5040, FactorialSnippet.factorial(7));
+        assertEquals(40320, FactorialSnippet.factorial(8));
+        assertEquals(362880, FactorialSnippet.factorial(9));
+        assertEquals(3628800, FactorialSnippet.factorial(10));
+    }
 
-  /**
-   * Tests for {@link FactorialSnippet#recursiveFactorial(int)}.
-   */
-  @Test
-  void testRecursiveFactorial() {
-    assertEquals(1, FactorialSnippet.recursiveFactorial(0));
-    assertEquals(1, FactorialSnippet.recursiveFactorial(1));
-    assertEquals(2, FactorialSnippet.recursiveFactorial(2));
-    assertEquals(6, FactorialSnippet.recursiveFactorial(3));
-    assertEquals(24, FactorialSnippet.recursiveFactorial(4));
-    assertEquals(120, FactorialSnippet.recursiveFactorial(5));
-    assertEquals(720, FactorialSnippet.recursiveFactorial(6));
-    assertEquals(5040, FactorialSnippet.recursiveFactorial(7));
-    assertEquals(40320, FactorialSnippet.recursiveFactorial(8));
-    assertEquals(362880, FactorialSnippet.recursiveFactorial(9));
-    assertEquals(3628800, FactorialSnippet.recursiveFactorial(10));
-  }
+    /**
+     * Tests for {@link FactorialSnippet#recursiveFactorial(int)}.
+     */
+    @Test
+    void testRecursiveFactorial() {
+        assertEquals(1, FactorialSnippet.recursiveFactorial(0));
+        assertEquals(1, FactorialSnippet.recursiveFactorial(1));
+        assertEquals(2, FactorialSnippet.recursiveFactorial(2));
+        assertEquals(6, FactorialSnippet.recursiveFactorial(3));
+        assertEquals(24, FactorialSnippet.recursiveFactorial(4));
+        assertEquals(120, FactorialSnippet.recursiveFactorial(5));
+        assertEquals(720, FactorialSnippet.recursiveFactorial(6));
+        assertEquals(5040, FactorialSnippet.recursiveFactorial(7));
+        assertEquals(40320, FactorialSnippet.recursiveFactorial(8));
+        assertEquals(362880, FactorialSnippet.recursiveFactorial(9));
+        assertEquals(3628800, FactorialSnippet.recursiveFactorial(10));
+    }
 }

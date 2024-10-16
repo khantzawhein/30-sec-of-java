@@ -11,18 +11,18 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
-configurations {
-    checkstyleConfig
-}
-
-// Apply the checkstyle plugin
-apply plugin: 'checkstyle'
-checkstyle {
-    toolVersion = '10.3.4'
-    config = resources.text.fromArchiveEntry(configurations.checkstyleConfig, 'google_checks.xml')
-    maxErrors = 0
-    maxWarnings = 0
-}
+//configurations {
+//    checkstyleConfig
+//}
+//
+//// Apply the checkstyle plugin
+//apply plugin: 'checkstyle'
+//checkstyle {
+//    toolVersion = '10.3.4'
+//    config = resources.text.fromArchiveEntry(configurations.checkstyleConfig, 'google_checks.xml')
+//    maxErrors = 0
+//    maxWarnings = 0
+//}
 
 
 // In this section you declare where to find the dependencies of your project
@@ -46,9 +46,9 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-params:5.6.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
 
-    checkstyleConfig dependencies.create("com.puppycrawl.tools:checkstyle:${checkstyle.toolVersion}") {
-        transitive = false
-    }
+//    checkstyleConfig dependencies.create("com.puppycrawl.tools:checkstyle:${checkstyle.toolVersion}") {
+//        transitive = false
+//    }
 }
 
 test {

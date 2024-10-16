@@ -24,30 +24,31 @@
 
 package file;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /*
  * Tests for 30 Seconds of Java code library
  *
  */
 class ReadLinesSnippetTest {
-  /**
-   * Tests for {@link ReadLinesSnippet#readLines(String)}.
-   *
-   * @throws IOException if an I/O error occurs
-   */
-  @Test
-  void testReadLines() throws IOException {
-    var somelines = ReadLinesSnippet.readLines("src/test/resources/somelines.txt");
-    assertEquals(3, somelines.size());
-    assertEquals("foo", somelines.get(0));
-    assertEquals("bar", somelines.get(1));
-    assertEquals("baz", somelines.get(2));
-    assertThrows(IOException.class, () -> ReadLinesSnippet
+    /**
+     * Tests for {@link ReadLinesSnippet#readLines(String)}.
+     *
+     * @throws IOException if an I/O error occurs
+     */
+    @Test
+    void testReadLines() throws IOException {
+        var somelines = ReadLinesSnippet.readLines("src/test/resources/somelines.txt");
+        assertEquals(3, somelines.size());
+        assertEquals("foo", somelines.get(0));
+        assertEquals("bar", somelines.get(1));
+        assertEquals("baz", somelines.get(2));
+        assertThrows(IOException.class, () -> ReadLinesSnippet
             .readLines("some/nonexistent/filename.txt"));
-  }
+    }
 }
