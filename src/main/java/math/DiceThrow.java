@@ -31,45 +31,45 @@ import java.security.SecureRandom;
  */
 public class DiceThrow {
 
-    static SecureRandom random = new SecureRandom();
+  static SecureRandom random = new SecureRandom();
+
+  /**
+   * Returns the sum of sides for the given number of sides of each dice.
+   *
+   * @param noOfDice number of dice
+   * @param sides    sides of a dice
+   * @return int sum of sides for number of dice
+   */
+  public static int throwDice(int noOfDice, DiceSides sides) {
+
+    int sum = 0;
+    for (int i = 0; i < noOfDice; i++) {
+      sum = sum + (1 + random.nextInt(sides.getDiceSides()));
+    }
+    return sum;
+  }
+
+  /**
+   * Enum for standardized sided dice (4,6,8,10,12 and 20).
+   */
+  public enum DiceSides {
+
+    FOUR(4), SIX(6), EIGHT(8), TEN(10), TWELVE(12), TWENTY(20);
+
+    private final int diSides;
+
+    DiceSides(int diceSides) {
+      this.diSides = diceSides;
+    }
 
     /**
-     * Returns the sum of sides for the given number of sides of each dice.
+     * Returns the number of sides of a dice.
      *
-     * @param noOfDice number of dice
-     * @param sides    sides of a dice
-     * @return int sum of sides for number of dice
+     * @return int denoting number of sides of a dice
      */
-    public static int throwDice(int noOfDice, DiceSides sides) {
-
-        int sum = 0;
-        for (int i = 0; i < noOfDice; i++) {
-            sum = sum + (1 + random.nextInt(sides.getDiceSides()));
-        }
-        return sum;
+    public int getDiceSides() {
+      return this.diSides;
     }
 
-    /**
-     * Enum for standardized sided dice (4,6,8,10,12 and 20).
-     */
-    public enum DiceSides {
-
-        FOUR(4), SIX(6), EIGHT(8), TEN(10), TWELVE(12), TWENTY(20);
-
-        private final int diSides;
-
-        DiceSides(int diceSides) {
-            this.diSides = diceSides;
-        }
-
-        /**
-         * Returns the number of sides of a dice.
-         *
-         * @return int denoting number of sides of a dice
-         */
-        public int getDiceSides() {
-            return this.diSides;
-        }
-
-    }
+  }
 }

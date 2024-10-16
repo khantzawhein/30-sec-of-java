@@ -32,36 +32,36 @@ import java.util.List;
  */
 public class FibonacciSnippet {
 
-    private FibonacciSnippet() {
-    }
+  private FibonacciSnippet() {
+  }
 
-    /**
-     * Recursive Fibonacci series. Works only for small n and is spectacularly inefficient
-     *
-     * @param n given number
-     * @return fibonacci number for given n
-     */
-    public static int fibonacci(int n) {
-        if (n <= 1) {
-            return n;
-        } else {
-            return fibonacci(n - 1) + fibonacci(n - 2);
-        }
+  /**
+   * Recursive Fibonacci series. Works only for small n and is spectacularly inefficient
+   *
+   * @param n given number
+   * @return fibonacci number for given n
+   */
+  public static int fibonacci(int n) {
+    if (n <= 1) {
+      return n;
+    } else {
+      return fibonacci(n - 1) + fibonacci(n - 2);
     }
+  }
 
-    /**
-     * Example of what an iterative implementation of Fibonacci looks like.
-     *
-     * @param number given number
-     * @return fibonacci number for given n
-     */
-    public static int iterativeFibonacci(int number) {
-        List<Integer> list = new ArrayList<>();
-        list.add(0);
-        list.add(1);
-        for (int i = 2; i < number + 1; i++) {
-            list.add(list.get(i - 2) + list.get(i - 1));
-        }
-        return list.get(number);
+  /**
+   * Example of what an iterative implementation of Fibonacci looks like.
+   *
+   * @param number given number
+   * @return fibonacci number for given n
+   */
+  public static int iterativeFibonacci(int number) {
+    List<Integer> list = new ArrayList<>();
+    list.add(0);
+    list.add(1);
+    for (int i = 2; i < number + 1; i++) {
+      list.add(list.get(i - 2) + list.get(i - 1));
     }
+    return list.get(number);
+  }
 }

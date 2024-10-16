@@ -31,35 +31,35 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class NaturalNumberBinaryConversionSnippetTest {
 
-    @Test
-    void convertPositiveIntegerToBinary() {
-        assertEquals("0", NaturalNumberBinaryConversionSnippet.toBinary(0));
-        assertEquals("11", NaturalNumberBinaryConversionSnippet.toBinary(3));
-        assertEquals("101", NaturalNumberBinaryConversionSnippet.toBinary(5));
-        assertEquals("10000000000", NaturalNumberBinaryConversionSnippet.toBinary(0b10000000000));
-        assertEquals("10000000000", NaturalNumberBinaryConversionSnippet.toBinary(1024));
-        assertEquals("11111111", NaturalNumberBinaryConversionSnippet.toBinary(0xFF));
-        assertEquals("110110", NaturalNumberBinaryConversionSnippet.toBinary(066));
-    }
+  @Test
+  void convertPositiveIntegerToBinary() {
+    assertEquals("0", NaturalNumberBinaryConversionSnippet.toBinary(0));
+    assertEquals("11", NaturalNumberBinaryConversionSnippet.toBinary(3));
+    assertEquals("101", NaturalNumberBinaryConversionSnippet.toBinary(5));
+    assertEquals("10000000000", NaturalNumberBinaryConversionSnippet.toBinary(0b10000000000));
+    assertEquals("10000000000", NaturalNumberBinaryConversionSnippet.toBinary(1024));
+    assertEquals("11111111", NaturalNumberBinaryConversionSnippet.toBinary(0xFF));
+    assertEquals("110110", NaturalNumberBinaryConversionSnippet.toBinary(066));
+  }
 
-    @Test
-    void negativeIntegerToBinaryConversionThrowsException() {
-        assertThrows(NumberFormatException.class,
-            () -> NaturalNumberBinaryConversionSnippet.toBinary(-3));
-    }
+  @Test
+  void negativeIntegerToBinaryConversionThrowsException() {
+    assertThrows(NumberFormatException.class,
+      () -> NaturalNumberBinaryConversionSnippet.toBinary(-3));
+  }
 
-    @Test
-    void convertBinaryStringToInteger() {
-        assertEquals(3, NaturalNumberBinaryConversionSnippet.fromBinary("11"));
-        assertEquals(6, NaturalNumberBinaryConversionSnippet.fromBinary("110"));
-        assertEquals(0x5c, NaturalNumberBinaryConversionSnippet.fromBinary("01011100"));
-        assertEquals(127, NaturalNumberBinaryConversionSnippet.fromBinary("1111111"));
-    }
+  @Test
+  void convertBinaryStringToInteger() {
+    assertEquals(3, NaturalNumberBinaryConversionSnippet.fromBinary("11"));
+    assertEquals(6, NaturalNumberBinaryConversionSnippet.fromBinary("110"));
+    assertEquals(0x5c, NaturalNumberBinaryConversionSnippet.fromBinary("01011100"));
+    assertEquals(127, NaturalNumberBinaryConversionSnippet.fromBinary("1111111"));
+  }
 
-    @Test
-    void invalidBinaryStringToIntegerConversionThrowsException() {
-        assertThrows(NumberFormatException.class,
-            () -> NaturalNumberBinaryConversionSnippet.fromBinary("12"));
-    }
+  @Test
+  void invalidBinaryStringToIntegerConversionThrowsException() {
+    assertThrows(NumberFormatException.class,
+      () -> NaturalNumberBinaryConversionSnippet.fromBinary("12"));
+  }
 
 }

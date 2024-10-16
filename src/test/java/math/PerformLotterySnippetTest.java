@@ -33,18 +33,18 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  */
 class PerformLotterySnippetTest {
-    /**
-     * Tests for {@link PerformLotterySnippet#performLottery(int, int)}.
-     */
-    @Test
-    void testPerformLottery() {
-        var numbers0 = PerformLotterySnippet.performLottery(0, 0);
-        assertArrayEquals(new Integer[]{}, numbers0);
-        var numbers1 = PerformLotterySnippet.performLottery(1, 1);
-        assertArrayEquals(new Integer[]{1}, numbers1);
-        var numbers2 = PerformLotterySnippet.performLottery(2, 2);
-        assertEquals(2, numbers2.length);
-        assertTrue(numbers2[0] == 1 || numbers2[0] == 2);
-        assertTrue(numbers2[1] == 1 || numbers2[1] == 2);
-    }
+  /**
+   * Tests for {@link PerformLotterySnippet#performLottery(int, int)}.
+   */
+  @Test
+  void testPerformLottery() {
+    var numbers0 = PerformLotterySnippet.performLottery(0, 0);
+    assertArrayEquals(new Integer[]{}, numbers0);
+    var numbers1 = PerformLotterySnippet.performLottery(1, 1);
+    assertArrayEquals(new Integer[]{1}, numbers1);
+    var numbers2 = PerformLotterySnippet.performLottery(2, 2);
+    assertEquals(2, numbers2.length);
+    assertTrue(numbers2[0] == 1 || numbers2[0] == 2);
+    assertTrue(numbers2[1] == 1 || numbers2[1] == 2);
+  }
 }

@@ -36,15 +36,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  */
 class StringToDateSnippetTest {
-    /**
-     * Tests for {@link StringToDateSnippet#stringToDate(String, String)}.
-     */
-    @Test
-    void testStringToDate() throws ParseException {
-        var calendar = Calendar.getInstance();
-        calendar.setTime(StringToDateSnippet.stringToDate("2017-08-18", "yyyy-MM-dd"));
-        assertEquals(2017, calendar.get(Calendar.YEAR));
-        assertEquals(8, calendar.get(Calendar.MONTH) + 1);
-        assertEquals(18, calendar.get(Calendar.DAY_OF_MONTH));
-    }
+  /**
+   * Tests for {@link StringToDateSnippet#stringToDate(String, String)}.
+   */
+  @Test
+  void testStringToDate() throws ParseException {
+    var calendar = Calendar.getInstance();
+    calendar.setTime(StringToDateSnippet.stringToDate("2017-08-18", "yyyy-MM-dd"));
+    assertEquals(2017, calendar.get(Calendar.YEAR));
+    assertEquals(8, calendar.get(Calendar.MONTH) + 1);
+    assertEquals(18, calendar.get(Calendar.DAY_OF_MONTH));
+  }
 }

@@ -38,20 +38,20 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  *
  */
 class CaptureScreenSnippetTest {
-    /**
-     * Tests for {@link CaptureScreenSnippet#captureScreen(String)}.
-     */
-    @Test
-    void testCaptureScreen() throws IOException, AWTException {
-        final var filename = "src/test/resources/screenshot.png";
-        try {
-            CaptureScreenSnippet.captureScreen(filename);
-            var f = new File(filename);
-            assertTrue(f.exists() && !f.isDirectory());
-        } catch (HeadlessException e) {
-            // the test runs on a computer without a screen, it is ok to fail
-        } finally {
-            Files.deleteIfExists(new File(filename).toPath());
-        }
+  /**
+   * Tests for {@link CaptureScreenSnippet#captureScreen(String)}.
+   */
+  @Test
+  void testCaptureScreen() throws IOException, AWTException {
+    final var filename = "src/test/resources/screenshot.png";
+    try {
+      CaptureScreenSnippet.captureScreen(filename);
+      var f = new File(filename);
+      assertTrue(f.exists() && !f.isDirectory());
+    } catch (HeadlessException e) {
+      // the test runs on a computer without a screen, it is ok to fail
+    } finally {
+      Files.deleteIfExists(new File(filename).toPath());
     }
+  }
 }

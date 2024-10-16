@@ -33,14 +33,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 class ArrayMedianSnippetTest {
 
-    /**
-     * Tests for {@link ArrayMedianSnippet#arrayMedian(int[])}.
-     */
-    @Test
-    void testArrayMedian() {
-        assertEquals(11, ArrayMedianSnippet.arrayMedian(new int[]{4, 17, 2, 11, 29}));
-        assertEquals(4.5, ArrayMedianSnippet.arrayMedian(new int[]{9, 1, 11, 5, 3, 4}));
-        assertEquals(-11, ArrayMedianSnippet.arrayMedian(new int[]{-3, -1, -100, -11, -29}));
-        assertEquals(-11.5, ArrayMedianSnippet.arrayMedian(new int[]{1, -29, -14, -20, -9, -2}));
-    }
+  /**
+   * Tests for {@link ArrayMedianSnippet#arrayMedian(int[])}.
+   */
+  @Test
+  void testArrayMedian() {
+    assertEquals(11, ArrayMedianSnippet.arrayMedian(new int[]{4, 17, 2, 11, 29}));
+    assertEquals(4.5, ArrayMedianSnippet.arrayMedian(new int[]{9, 1, 11, 5, 3, 4}));
+    assertEquals(-11, ArrayMedianSnippet.arrayMedian(new int[]{-3, -1, -100, -11, -29}));
+    assertEquals(-11.5, ArrayMedianSnippet.arrayMedian(new int[]{1, -29, -14, -20, -9, -2}));
+  }
 }

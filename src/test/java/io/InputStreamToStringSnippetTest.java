@@ -38,22 +38,22 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *
  */
 class InputStreamToStringSnippetTest {
-    /**
-     * Tests for {@link InputStreamToStringSnippet#inputStreamToString(InputStream)}.
-     */
-    @Test
-    void testInputStreamToString() throws IOException {
-        String newLine = System.getProperty("line.separator");
-        String str = "ąćśź" + newLine +
-            "←≠²³¢²€" + newLine +
-            "июля" + newLine +
-            "åøä" + newLine +
-            "ñí" + newLine +
-            "7月15日起" + newLine +
-            "خەيرلىك ئەتىگەن!";
-        assertEquals(str, InputStreamToStringSnippet.inputStreamToString(
-            new FileInputStream("src/test/resources/dir1/placeholder.txt")));
-        assertNotEquals(str.toUpperCase(), InputStreamToStringSnippet.inputStreamToString(
-            new FileInputStream("src/test/resources/dir1/placeholder.txt")));
-    }
+  /**
+   * Tests for {@link InputStreamToStringSnippet#inputStreamToString(InputStream)}.
+   */
+  @Test
+  void testInputStreamToString() throws IOException {
+    String newLine = System.getProperty("line.separator");
+    String str = "ąćśź" + newLine +
+      "←≠²³¢²€" + newLine +
+      "июля" + newLine +
+      "åøä" + newLine +
+      "ñí" + newLine +
+      "7月15日起" + newLine +
+      "خەيرلىك ئەتىگەن!";
+    assertEquals(str, InputStreamToStringSnippet.inputStreamToString(
+      new FileInputStream("src/test/resources/dir1/placeholder.txt")));
+    assertNotEquals(str.toUpperCase(), InputStreamToStringSnippet.inputStreamToString(
+      new FileInputStream("src/test/resources/dir1/placeholder.txt")));
+  }
 }

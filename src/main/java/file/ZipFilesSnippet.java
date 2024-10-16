@@ -36,30 +36,30 @@ import java.util.zip.ZipOutputStream;
  */
 public class ZipFilesSnippet {
 
-    /**
-     * Zip multiples files.
-     *
-     * @param srcFilenames array of source file names
-     * @param zipFilename  the filename of the destination zip file
-     * @throws IOException if an I/O error occurs
-     */
-    public static void zipFiles(String[] srcFilenames, String zipFilename) throws IOException {
-        try (
-            var fileOut = new FileOutputStream(zipFilename);
-            var zipOut = new ZipOutputStream(fileOut)
-        ) {
-            for (String srcFilename : srcFilenames) {
-                var srcFile = new File(srcFilename);
-                try (var fileIn = new FileInputStream(srcFile)) {
-                    var zipEntry = new ZipEntry(srcFile.getName());
-                    zipOut.putNextEntry(zipEntry);
-                    final var bytes = new byte[1024];
-                    int length;
-                    while ((length = fileIn.read(bytes)) >= 0) {
-                        zipOut.write(bytes, 0, length);
-                    }
-                }
-            }
+  /**
+   * Zip multiples files.
+   *
+   * @param srcFilenames array of source file names
+   * @param zipFilename  the filename of the destination zip file
+   * @throws IOException if an I/O error occurs
+   */
+  public static void zipFiles(String[] srcFilenames, String zipFilename) throws IOException {
+    try (
+      var fileOut = new FileOutputStream(zipFilename);
+      var zipOut = new ZipOutputStream(fileOut)
+    ) {
+      for (String srcFilename : srcFilenames) {
+        var srcFile = new File(srcFilename);
+        try (var fileIn = new FileInputStream(srcFile)) {
+          var zipEntry = new ZipEntry(srcFile.getName());
+          zipOut.putNextEntry(zipEntry);
+          final var bytes = new byte[1024];
+          int length;
+          while ((length = fileIn.read(bytes)) >= 0) {
+            zipOut.write(bytes, 0, length);
+          }
         }
+      }
     }
+  }
 }

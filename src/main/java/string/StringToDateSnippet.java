@@ -33,16 +33,16 @@ import java.util.Date;
  */
 public class StringToDateSnippet {
 
-    /**
-     * Convert string to date.
-     *
-     * @param date   the date string
-     * @param format expected date format
-     * @return Date
-     * @throws ParseException in case of an unparseable date string
-     */
-    public static Date stringToDate(String date, String format) throws ParseException {
-        var simpleDateFormat = new SimpleDateFormat(format);
-        return simpleDateFormat.parse(date);
-    }
+  /**
+   * Convert string to date.
+   *
+   * @param date   the date string
+   * @param format expected date format
+   * @return Date
+   * @throws ParseException in case of an unparseable date string
+   */
+  public static Date stringToDate(String date, String format) throws ParseException {
+    var simpleDateFormat = new SimpleDateFormat(format);
+    return simpleDateFormat.parse(date);
+  }
 }

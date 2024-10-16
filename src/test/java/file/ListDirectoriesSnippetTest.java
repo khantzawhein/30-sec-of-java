@@ -36,15 +36,15 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  *
  */
 class ListDirectoriesSnippetTest {
-    /**
-     * Tests for {@link ListDirectoriesSnippet#listDirectories(String)}.
-     */
-    @Test
-    void testListDirectories() {
-        var files = ListDirectoriesSnippet.listDirectories("src/test/resources");
-        assertTrue(Arrays.stream(files).allMatch(File::isDirectory));
-        assertTrue(Arrays.asList(files).contains(new File("src/test/resources/dir1")));
-        assertTrue(Arrays.asList(files).contains(new File("src/test/resources/dir2")));
-    }
+  /**
+   * Tests for {@link ListDirectoriesSnippet#listDirectories(String)}.
+   */
+  @Test
+  void testListDirectories() {
+    var files = ListDirectoriesSnippet.listDirectories("src/test/resources");
+    assertTrue(Arrays.stream(files).allMatch(File::isDirectory));
+    assertTrue(Arrays.asList(files).contains(new File("src/test/resources/dir1")));
+    assertTrue(Arrays.asList(files).contains(new File("src/test/resources/dir2")));
+  }
 
 }

@@ -34,15 +34,15 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  *
  */
 class PalindromCheckSnippetTest {
-    /**
-     * Tests for {@link PalindromCheckSnippet#isPalindrome(String)}.
-     */
-    @Test
-    void testIsPalindrome() {
-        assertTrue(PalindromCheckSnippet.isPalindrome("saippuakauppias"));
-        // non-letter characters are skipped
-        assertTrue(PalindromCheckSnippet.isPalindrome("111 Saippua - Kauppias 321"));
-        assertFalse(PalindromCheckSnippet.isPalindrome("Type O Negative"));
-        assertFalse(PalindromCheckSnippet.isPalindrome("Foo12121Bar"));
-    }
+  /**
+   * Tests for {@link PalindromCheckSnippet#isPalindrome(String)}.
+   */
+  @Test
+  void testIsPalindrome() {
+    assertTrue(PalindromCheckSnippet.isPalindrome("saippuakauppias"));
+    // non-letter characters are skipped
+    assertTrue(PalindromCheckSnippet.isPalindrome("111 Saippua - Kauppias 321"));
+    assertFalse(PalindromCheckSnippet.isPalindrome("Type O Negative"));
+    assertFalse(PalindromCheckSnippet.isPalindrome("Foo12121Bar"));
+  }
 }

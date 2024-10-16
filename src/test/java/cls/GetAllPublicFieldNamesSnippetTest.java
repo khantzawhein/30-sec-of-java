@@ -34,19 +34,19 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  *
  */
 class GetAllPublicFieldNamesSnippetTest {
-    /**
-     * Tests for {@link GetAllPublicFieldNamesSnippet#getAllPublicFieldNames(Class)}.
-     */
-    @Test
-    void testGetAllPublicFieldNames() {
-        class TestClass {
-            public int fieldOne;
-            public int fieldTwo;
-        }
-
-        var list = GetAllPublicFieldNamesSnippet.getAllPublicFieldNames(TestClass.class);
-        assertEquals(2, list.size());
-        assertTrue(list.contains("fieldOne"));
-        assertTrue(list.contains("fieldTwo"));
+  /**
+   * Tests for {@link GetAllPublicFieldNamesSnippet#getAllPublicFieldNames(Class)}.
+   */
+  @Test
+  void testGetAllPublicFieldNames() {
+    class TestClass {
+      public int fieldOne;
+      public int fieldTwo;
     }
+
+    var list = GetAllPublicFieldNamesSnippet.getAllPublicFieldNames(TestClass.class);
+    assertEquals(2, list.size());
+    assertTrue(list.contains("fieldOne"));
+    assertTrue(list.contains("fieldTwo"));
+  }
 }

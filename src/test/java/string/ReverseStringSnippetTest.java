@@ -33,12 +33,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  */
 class ReverseStringSnippetTest {
-    /**
-     * Tests for {@link ReverseStringSnippet#reverseString(String)}.
-     */
-    @Test
-    void testReverseString() {
-        assertEquals("oof", ReverseStringSnippet.reverseString("foo"));
-        assertEquals("ÖÄÅ321FED cba", ReverseStringSnippet.reverseString("abc DEF123ÅÄÖ"));
-    }
+  /**
+   * Tests for {@link ReverseStringSnippet#reverseString(String)}.
+   */
+  @Test
+  void testReverseString() {
+    assertEquals("oof", ReverseStringSnippet.reverseString("foo"));
+    assertEquals("ÖÄÅ321FED cba", ReverseStringSnippet.reverseString("abc DEF123ÅÄÖ"));
+  }
 }

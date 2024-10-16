@@ -32,16 +32,16 @@ import org.junit.jupiter.api.Test;
  */
 
 public class LinearSearchIn2dArraySnippetTest {
-    /**
-     * Test for {@link LinearSearchIn2dArraySnippet #LinearSearchIn2dArraySnippet(int[][],int)}.
-     */
-    @Test
-    void testLinearSearchIn2dArraySnippetTest() {
-        int[][] arr1 = {{3, 4, 7, 9}, {12, 24, 26, 29}, {34, 55, 88, 99}, {100, 189, 232, 234}};
-        int[] ans1 = {1, 2};
-        Assertions.assertArrayEquals(ans1, LinearSearchIn2dArraySnippet.linearSearch2dArray(arr1, 26));
-        int[][] arr2 = {{3, 4, 7, 9}, {12, 24, 26, 29}, {34, 55, 88, 99}, {100, 189, 232, 234}};
-        int[] ans2 = {-1, -1};
-        Assertions.assertArrayEquals(ans2, LinearSearchIn2dArraySnippet.linearSearch2dArray(arr2, 69));
-    }
+  /**
+   * Test for {@link LinearSearchIn2dArraySnippet #LinearSearchIn2dArraySnippet(int[][],int)}.
+   */
+  @Test
+  void testLinearSearchIn2dArraySnippetTest() {
+    int[][] arr1 = {{3, 4, 7, 9}, {12, 24, 26, 29}, {34, 55, 88, 99}, {100, 189, 232, 234}};
+    int[] ans1 = {1, 2};
+    Assertions.assertArrayEquals(ans1, LinearSearchIn2dArraySnippet.linearSearch2dArray(arr1, 26));
+    int[][] arr2 = {{3, 4, 7, 9}, {12, 24, 26, 29}, {34, 55, 88, 99}, {100, 189, 232, 234}};
+    int[] ans2 = {-1, -1};
+    Assertions.assertArrayEquals(ans2, LinearSearchIn2dArraySnippet.linearSearch2dArray(arr2, 69));
+  }
 }

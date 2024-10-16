@@ -34,45 +34,45 @@ import java.util.stream.Stream;
  */
 public class NaturalNumberBinaryConversionSnippet {
 
-    private NaturalNumberBinaryConversionSnippet() {
-    }
+  private NaturalNumberBinaryConversionSnippet() {
+  }
 
-    /**
-     * Convert natural number to binary string. Only supports positive integers.Throws exception
-     * for negative integers
-     *
-     * @param naturalNumber given number
-     * @return Binary string representation of naturalNumber
-     */
-    public static String toBinary(long naturalNumber) {
-        if (naturalNumber < 0) {
-            throw new NumberFormatException("Negative Integer, this snippet only accepts "
-                + "positive integers");
-        }
-        if (naturalNumber == 0) {
-            return "0";
-        }
-        final Stack<Long> binaryBits =
-            Stream.iterate(naturalNumber, n -> n > 0, n -> n / 2).map(n -> n % 2)
-                .collect(Stack::new, Stack::push, Stack::addAll);
-        return Stream.generate(binaryBits::pop)
-            .limit(binaryBits.size()).map(String::valueOf).collect(Collectors.joining());
+  /**
+   * Convert natural number to binary string. Only supports positive integers.Throws exception
+   * for negative integers
+   *
+   * @param naturalNumber given number
+   * @return Binary string representation of naturalNumber
+   */
+  public static String toBinary(long naturalNumber) {
+    if (naturalNumber < 0) {
+      throw new NumberFormatException("Negative Integer, this snippet only accepts "
+        + "positive integers");
     }
+    if (naturalNumber == 0) {
+      return "0";
+    }
+    final Stack<Long> binaryBits =
+      Stream.iterate(naturalNumber, n -> n > 0, n -> n / 2).map(n -> n % 2)
+        .collect(Stack::new, Stack::push, Stack::addAll);
+    return Stream.generate(binaryBits::pop)
+      .limit(binaryBits.size()).map(String::valueOf).collect(Collectors.joining());
+  }
 
-    /**
-     * Convert binary string representation to Long valued Integer. Throws exception if input
-     * string contains characters other than '0' and '1'
-     *
-     * @param binary given number
-     * @return Unsigned Long value for the binary number
-     */
-    public static Long fromBinary(String binary) {
-        binary.chars().filter(c -> c != '0' && c != '1').findFirst().ifPresent(in -> {
-            throw new NumberFormatException(
-                "Binary string contains values other than '0' and '1'");
-        });
-        return IntStream.range(0, binary.length())
-            .filter(in -> binary.charAt(binary.length() - 1 - in) == '1')
-            .mapToLong(in -> ((long) 0b1) << in).sum();
-    }
+  /**
+   * Convert binary string representation to Long valued Integer. Throws exception if input
+   * string contains characters other than '0' and '1'
+   *
+   * @param binary given number
+   * @return Unsigned Long value for the binary number
+   */
+  public static Long fromBinary(String binary) {
+    binary.chars().filter(c -> c != '0' && c != '1').findFirst().ifPresent(in -> {
+      throw new NumberFormatException(
+        "Binary string contains values other than '0' and '1'");
+    });
+    return IntStream.range(0, binary.length())
+      .filter(in -> binary.charAt(binary.length() - 1 - in) == '1')
+      .mapToLong(in -> ((long) 0b1) << in).sum();
+  }
 }

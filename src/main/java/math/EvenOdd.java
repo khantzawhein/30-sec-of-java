@@ -28,20 +28,20 @@ package math;
  * EvenOdd.
  */
 public class EvenOdd {
-    private EvenOdd() {
-    }
+  private EvenOdd() {
+  }
 
-    /**
-     * Returns string denoting number is odd or even.
-     *
-     * @param num To check whether its even or odd
-     * @return string denoting its even or odd
-     */
-    public static String evenodd(int num) {
-        if (num % 2 == 0) {
-            return "even";
-        } else {
-            return "odd";
-        }
+  /**
+   * Returns string denoting number is odd or even.
+   *
+   * @param num To check whether its even or odd
+   * @return string denoting its even or odd
+   */
+  public static String evenodd(int num) {
+    if (num % 2 == 0) {
+      return "even";
+    } else {
+      return "odd";
     }
+  }
 }

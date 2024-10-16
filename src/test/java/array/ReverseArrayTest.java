@@ -37,121 +37,121 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class ReverseArrayTest {
 
 
-    /**
-     * reverseArray should correctly reverse the entire array.
-     **/
+  /**
+   * reverseArray should correctly reverse the entire array.
+   **/
 
-    @Test
-    void testReverseArrayFull() {
-        Integer[] arr = {1, 2, 3, 4, 5};
-        Integer[] result = ReverseArraySnippet.reverseArray(arr, 0, arr.length - 1);
-        Integer[] expected = {5, 4, 3, 2, 1};
-        assertArrayEquals(expected, result);
-    }
+  @Test
+  void testReverseArrayFull() {
+    Integer[] arr = {1, 2, 3, 4, 5};
+    Integer[] result = ReverseArraySnippet.reverseArray(arr, 0, arr.length - 1);
+    Integer[] expected = {5, 4, 3, 2, 1};
+    assertArrayEquals(expected, result);
+  }
 
-    /**
-     * reverseArray should correctly reverse a subset of the array.
-     **/
+  /**
+   * reverseArray should correctly reverse a subset of the array.
+   **/
 
-    @Test
-    void testReverseArrayPartial() {
-        String[] arr = {"Ali", "Shabnam", "Reza", "Fatemeh"};
-        String[] result = ReverseArraySnippet.reverseArray(arr, 1, 2);
-        String[] expected = {"Ali", "Reza", "Shabnam", "Fatemeh"};
-        assertArrayEquals(expected, result);
-    }
+  @Test
+  void testReverseArrayPartial() {
+    String[] arr = {"Ali", "Shabnam", "Reza", "Fatemeh"};
+    String[] result = ReverseArraySnippet.reverseArray(arr, 1, 2);
+    String[] expected = {"Ali", "Reza", "Shabnam", "Fatemeh"};
+    assertArrayEquals(expected, result);
+  }
 
-    /**
-     * reverseArray should correctly reverse a subset of the array with decimal values.
-     **/
+  /**
+   * reverseArray should correctly reverse a subset of the array with decimal values.
+   **/
 
-    @Test
-    void testReverseArrayDecimal() {
-        Double[] arr = {5.5, 4.4, 3.3, 2.2, 1.1};
-        Double[] result = ReverseArraySnippet.reverseArray(arr, 2, 4);
-        Double[] expected = {5.5, 4.4, 1.1, 2.2, 3.3};
-        assertArrayEquals(expected, result);
-    }
+  @Test
+  void testReverseArrayDecimal() {
+    Double[] arr = {5.5, 4.4, 3.3, 2.2, 1.1};
+    Double[] result = ReverseArraySnippet.reverseArray(arr, 2, 4);
+    Double[] expected = {5.5, 4.4, 1.1, 2.2, 3.3};
+    assertArrayEquals(expected, result);
+  }
 
-    /**
-     * reverseArray should correctly handle a single element array.
-     **/
+  /**
+   * reverseArray should correctly handle a single element array.
+   **/
 
-    @Test
-    void testReverseArraySingleElement() {
-        Integer[] arr = {1};
-        Integer[] result = ReverseArraySnippet.reverseArray(arr, 0, arr.length - 1);
-        Integer[] expected = {1};
-        assertArrayEquals(expected, result);
-    }
+  @Test
+  void testReverseArraySingleElement() {
+    Integer[] arr = {1};
+    Integer[] result = ReverseArraySnippet.reverseArray(arr, 0, arr.length - 1);
+    Integer[] expected = {1};
+    assertArrayEquals(expected, result);
+  }
 
-    /**
-     * reverseArray should correctly handle an empty array.
-     **/
+  /**
+   * reverseArray should correctly handle an empty array.
+   **/
 
-    @Test
-    void testReverseArrayEmpty() {
-        Integer[] arr = new Integer[0];
-        Integer[] result = ReverseArraySnippet.reverseArray(arr, 0, 0);
-        Integer[] expected = new Integer[0];
-        assertArrayEquals(expected, result);
-    }
+  @Test
+  void testReverseArrayEmpty() {
+    Integer[] arr = new Integer[0];
+    Integer[] result = ReverseArraySnippet.reverseArray(arr, 0, 0);
+    Integer[] expected = new Integer[0];
+    assertArrayEquals(expected, result);
+  }
 
-    /**
-     * reverseArray when start and end are equal.
-     **/
+  /**
+   * reverseArray when start and end are equal.
+   **/
 
-    @Test
-    void testReverseArrayNoChange() {
-        Integer[] array = {1, 2, 3, 4, 5};
-        int start = 2;
-        int end = 2;
-        Integer[] reversedArray = ReverseArraySnippet.reverseArray(array, start, end);
-        assertArrayEquals(array, reversedArray);
-    }
+  @Test
+  void testReverseArrayNoChange() {
+    Integer[] array = {1, 2, 3, 4, 5};
+    int start = 2;
+    int end = 2;
+    Integer[] reversedArray = ReverseArraySnippet.reverseArray(array, start, end);
+    assertArrayEquals(array, reversedArray);
+  }
 
-    /**
-     * reverseArray should throw ArrayIndexOutOfBoundsException if startIndex is less than 0.
-     **/
+  /**
+   * reverseArray should throw ArrayIndexOutOfBoundsException if startIndex is less than 0.
+   **/
 
-    @Test
-    void testReverseArrayNegativeStartIndex() {
-        Integer[] arr = {1, 2, 3, 4, 5};
-        assertThrows(ArrayIndexOutOfBoundsException.class, () ->
-            ReverseArraySnippet.reverseArray(arr, -1, 3));
-    }
+  @Test
+  void testReverseArrayNegativeStartIndex() {
+    Integer[] arr = {1, 2, 3, 4, 5};
+    assertThrows(ArrayIndexOutOfBoundsException.class, () ->
+      ReverseArraySnippet.reverseArray(arr, -1, 3));
+  }
 
-    /**
-     * reverseArray should throw ArrayIndexOutOfBoundsException if endIndex
-     * is greater than the array size minus 1.
-     **/
+  /**
+   * reverseArray should throw ArrayIndexOutOfBoundsException if endIndex
+   * is greater than the array size minus 1.
+   **/
 
-    @Test
-    void testReverseArrayEndIndexOutOfBounds() {
-        Integer[] arr = {1, 2, 3, 4, 5};
-        assertThrows(ArrayIndexOutOfBoundsException.class,
-            () -> ReverseArraySnippet.reverseArray(arr, 2, 5));
-    }
+  @Test
+  void testReverseArrayEndIndexOutOfBounds() {
+    Integer[] arr = {1, 2, 3, 4, 5};
+    assertThrows(ArrayIndexOutOfBoundsException.class,
+      () -> ReverseArraySnippet.reverseArray(arr, 2, 5));
+  }
 
-    /**
-     * reverseArray should throw ArrayIndexOutOfBoundsException
-     * if startIndex is greater than endIndex.
-     **/
+  /**
+   * reverseArray should throw ArrayIndexOutOfBoundsException
+   * if startIndex is greater than endIndex.
+   **/
 
-    @Test
-    void testReverseArrayInvalidIndexes() {
-        Integer[] arr = {1, 2, 3, 4, 5};
-        assertThrows(IllegalArgumentException.class, () -> ReverseArraySnippet.reverseArray(arr, 3, 2));
-    }
+  @Test
+  void testReverseArrayInvalidIndexes() {
+    Integer[] arr = {1, 2, 3, 4, 5};
+    assertThrows(IllegalArgumentException.class, () -> ReverseArraySnippet.reverseArray(arr, 3, 2));
+  }
 
-    /**
-     * reverseArray should throw IllegalArgumentException if the input array is null.
-     */
+  /**
+   * reverseArray should throw IllegalArgumentException if the input array is null.
+   */
 
-    @Test
-    void testReverseArrayNullInput() {
-        assertThrows(IllegalArgumentException.class, () ->
-            ReverseArraySnippet.reverseArray(null, 0, 2));
-    }
+  @Test
+  void testReverseArrayNullInput() {
+    assertThrows(IllegalArgumentException.class, () ->
+      ReverseArraySnippet.reverseArray(null, 0, 2));
+  }
 
 }

@@ -38,18 +38,18 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  *
  */
 class ZipFileSnippetTest {
-    /**
-     * Tests for {@link ZipFileSnippet#zipFile(String, String)}.
-     */
-    @Test
-    void testZipFile() throws IOException {
-        final var src = "src/test/resources/somelines.txt";
-        final var dst = "src/test/resources/somelines.zip";
-        try {
-            ZipFileSnippet.zipFile(src, dst);
-            assertTrue(Files.exists(Paths.get(dst)));
-        } finally {
-            Files.deleteIfExists(new File(dst).toPath());
-        }
+  /**
+   * Tests for {@link ZipFileSnippet#zipFile(String, String)}.
+   */
+  @Test
+  void testZipFile() throws IOException {
+    final var src = "src/test/resources/somelines.txt";
+    final var dst = "src/test/resources/somelines.zip";
+    try {
+      ZipFileSnippet.zipFile(src, dst);
+      assertTrue(Files.exists(Paths.get(dst)));
+    } finally {
+      Files.deleteIfExists(new File(dst).toPath());
     }
+  }
 }

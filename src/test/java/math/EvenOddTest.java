@@ -32,15 +32,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Tests for 30 Seconds of Java code library.
  */
 class EvenOddTest {
-    /**
-     * Test for {@link EvenOdd #EvenOdd(int)}.
-     */
-    @Test
-    void test_evenOdd() {
-        assertEquals("even", EvenOdd.evenodd(4));
-        assertEquals("even", EvenOdd.evenodd(0));
-        assertEquals("odd", EvenOdd.evenodd(97));
-        assertEquals("even", EvenOdd.evenodd(-96662));
-        assertEquals("odd", EvenOdd.evenodd(1));
-    }
+  /**
+   * Test for {@link EvenOdd #EvenOdd(int)}.
+   */
+  @Test
+  void test_evenOdd() {
+    assertEquals("even", EvenOdd.evenodd(4));
+    assertEquals("even", EvenOdd.evenodd(0));
+    assertEquals("odd", EvenOdd.evenodd(97));
+    assertEquals("even", EvenOdd.evenodd(-96662));
+    assertEquals("odd", EvenOdd.evenodd(1));
+  }
 }

@@ -34,14 +34,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 class CommonLettersSnippetTest {
 
-    /**
-     * Tests for {@link CommonLettersSnippet#getCommonLetters(String, String)}.
-     */
-    @Test
-    void testgetCommonLetters() {
-        String str = "abfcd!?055bcxaz^fg#)";
-        String str2 = "b45893fndg%+1vc";
-        assertEquals("b c d f g", CommonLettersSnippet.getCommonLetters(str, str2));
-    }
+  /**
+   * Tests for {@link CommonLettersSnippet#getCommonLetters(String, String)}.
+   */
+  @Test
+  void testgetCommonLetters() {
+    String str = "abfcd!?055bcxaz^fg#)";
+    String str2 = "b45893fndg%+1vc";
+    assertEquals("b c d f g", CommonLettersSnippet.getCommonLetters(str, str2));
+  }
 
 }

@@ -31,27 +31,27 @@ import java.util.Set;
  * CommonLettersSnippet.
  */
 public class CommonLettersSnippet {
-    private CommonLettersSnippet() {
-    }
+  private CommonLettersSnippet() {
+  }
 
-    /**
-     * Find Common Characters inside given two strings.
-     *
-     * @param firstStr  first string
-     * @param secondStr second string
-     * @return Common Characters.
-     */
-    public static String getCommonLetters(String firstStr, String secondStr) {
-        Set<String> commonLetters = new HashSet<>();
-        for (Character currentCharacter : firstStr.toCharArray()) {
-            if (isCommonLetter(secondStr, currentCharacter)) {
-                commonLetters.add(currentCharacter.toString());
-            }
-        }
-        return String.join(" ", commonLetters);
+  /**
+   * Find Common Characters inside given two strings.
+   *
+   * @param firstStr  first string
+   * @param secondStr second string
+   * @return Common Characters.
+   */
+  public static String getCommonLetters(String firstStr, String secondStr) {
+    Set<String> commonLetters = new HashSet<>();
+    for (Character currentCharacter : firstStr.toCharArray()) {
+      if (isCommonLetter(secondStr, currentCharacter)) {
+        commonLetters.add(currentCharacter.toString());
+      }
     }
+    return String.join(" ", commonLetters);
+  }
 
-    private static boolean isCommonLetter(String str, Character character) {
-        return str.contains(character.toString()) && Character.isLetter(character);
-    }
+  private static boolean isCommonLetter(String str, Character character) {
+    return str.contains(character.toString()) && Character.isLetter(character);
+  }
 }

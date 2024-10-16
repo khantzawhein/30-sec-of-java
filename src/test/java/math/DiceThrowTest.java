@@ -35,19 +35,19 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 class DiceThrowTest {
 
-    /**
-     * Tests for {@link DiceThrow #throwDice(int, DiceSides)}.
-     */
-    @Test
-    void testThrowDice() {
-        // Test for Dice throw
-        assertTrue(DiceThrow.throwDice(3, DiceSides.SIX) <= 18);
-        assertTrue(DiceThrow.throwDice(2, DiceSides.FOUR) <= 8);
-        assertTrue(DiceThrow.throwDice(3, DiceSides.EIGHT) <= 24);
-        assertTrue(DiceThrow.throwDice(4, DiceSides.TEN) <= 40);
-        assertTrue(DiceThrow.throwDice(1, DiceSides.TWELVE) <= 12);
-        assertTrue(DiceThrow.throwDice(2, DiceSides.TWENTY) <= 40);
-        assertEquals(0, DiceThrow.throwDice(0, DiceSides.FOUR));
+  /**
+   * Tests for {@link DiceThrow #throwDice(int, DiceSides)}.
+   */
+  @Test
+  void testThrowDice() {
+    // Test for Dice throw
+    assertTrue(DiceThrow.throwDice(3, DiceSides.SIX) <= 18);
+    assertTrue(DiceThrow.throwDice(2, DiceSides.FOUR) <= 8);
+    assertTrue(DiceThrow.throwDice(3, DiceSides.EIGHT) <= 24);
+    assertTrue(DiceThrow.throwDice(4, DiceSides.TEN) <= 40);
+    assertTrue(DiceThrow.throwDice(1, DiceSides.TWELVE) <= 12);
+    assertTrue(DiceThrow.throwDice(2, DiceSides.TWENTY) <= 40);
+    assertEquals(0, DiceThrow.throwDice(0, DiceSides.FOUR));
 
-    }
+  }
 }

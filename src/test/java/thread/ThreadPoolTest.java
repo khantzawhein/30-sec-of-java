@@ -36,14 +36,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *
  */
 class ThreadPoolTest {
-    /**
-     * Tests for {@link ThreadPool#createFixedThreadPool()}.
-     */
-    @Test
-    void testCreateFixedThreadPool() {
-        var numProcessors = Runtime.getRuntime().availableProcessors();
-        var executorService = (ThreadPoolExecutor) ThreadPool.createFixedThreadPool();
-        assertEquals(numProcessors, executorService.getCorePoolSize());
-        assertNotEquals(0, executorService.getCorePoolSize());
-    }
+  /**
+   * Tests for {@link ThreadPool#createFixedThreadPool()}.
+   */
+  @Test
+  void testCreateFixedThreadPool() {
+    var numProcessors = Runtime.getRuntime().availableProcessors();
+    var executorService = (ThreadPoolExecutor) ThreadPool.createFixedThreadPool();
+    assertEquals(numProcessors, executorService.getCorePoolSize());
+    assertNotEquals(0, executorService.getCorePoolSize());
+  }
 }

@@ -35,18 +35,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MaxCharacterCountSnippetTest {
 
-    /**
-     * Tests for {@link MaxCharacterCountSnippet#getMaxCharacterCount(String, char)}.
-     */
-    @Test
-    void testgetMaxCharacterCount() {
-        assertEquals(5, MaxCharacterCountSnippet.getMaxCharacterCount("dddddsgddvcidd", 'd'));
-        assertEquals(4, MaxCharacterCountSnippet.getMaxCharacterCount("bbkfgjhgjkbbbb", 'b'));
-        assertEquals(6, MaxCharacterCountSnippet.getMaxCharacterCount("saalallaaaaaala", 'a'));
-        assertEquals(5, MaxCharacterCountSnippet.getMaxCharacterCount("66627g38hg66666066jg66", '6'));
-        assertEquals(0, MaxCharacterCountSnippet.getMaxCharacterCount("kdfjgkfjggjgg", 'v'));
-        assertEquals(3, MaxCharacterCountSnippet.getMaxCharacterCount("massmmmajtim", 'm'));
-    }
+  /**
+   * Tests for {@link MaxCharacterCountSnippet#getMaxCharacterCount(String, char)}.
+   */
+  @Test
+  void testgetMaxCharacterCount() {
+    assertEquals(5, MaxCharacterCountSnippet.getMaxCharacterCount("dddddsgddvcidd", 'd'));
+    assertEquals(4, MaxCharacterCountSnippet.getMaxCharacterCount("bbkfgjhgjkbbbb", 'b'));
+    assertEquals(6, MaxCharacterCountSnippet.getMaxCharacterCount("saalallaaaaaala", 'a'));
+    assertEquals(5, MaxCharacterCountSnippet.getMaxCharacterCount("66627g38hg66666066jg66", '6'));
+    assertEquals(0, MaxCharacterCountSnippet.getMaxCharacterCount("kdfjgkfjggjgg", 'v'));
+    assertEquals(3, MaxCharacterCountSnippet.getMaxCharacterCount("massmmmajtim", 'm'));
+  }
 
 
 }

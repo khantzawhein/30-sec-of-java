@@ -26,8 +26,7 @@ package algorithm;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 /*
  * Tests for 30 Seconds of Java code library
@@ -35,32 +34,32 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 
 class SieveOfEratosthenesSnippetTest {
-    /**
-     * Tests for {@link SieveOfEratosthenesSnippet (int)}.
-     */
+  /**
+   * Tests for {@link SieveOfEratosthenesSnippet (int)}.
+   */
 
-    @Test
-    void testSieveOfEratosthenes() {
-        boolean[] arr = SieveOfEratosthenesSnippet.sieveOfEratosthenes(4);
-        assertTrue(arr[0]);
-        assertTrue(arr[1]);
-        assertTrue(arr[2]);
-        assertTrue(arr[3]);
-        assertFalse(arr[4]);
+  @Test
+  void testSieveOfEratosthenes() {
+    boolean[] arr = SieveOfEratosthenesSnippet.sieveOfEratosthenes(4);
+    assertTrue(arr[0]);
+    assertTrue(arr[1]);
+    assertTrue(arr[2]);
+    assertTrue(arr[3]);
+    assertFalse(arr[4]);
 
-        boolean[] arr2 = SieveOfEratosthenesSnippet.sieveOfEratosthenes(7);
-        assertTrue(arr2[0]);
-        assertTrue(arr2[1]);
-        assertTrue(arr2[2]);
-        assertTrue(arr2[3]);
-        assertFalse(arr2[4]);
-        assertTrue(arr2[5]);
-        assertFalse(arr2[6]);
-        assertTrue(arr2[7]);
+    boolean[] arr2 = SieveOfEratosthenesSnippet.sieveOfEratosthenes(7);
+    assertTrue(arr2[0]);
+    assertTrue(arr2[1]);
+    assertTrue(arr2[2]);
+    assertTrue(arr2[3]);
+    assertFalse(arr2[4]);
+    assertTrue(arr2[5]);
+    assertFalse(arr2[6]);
+    assertTrue(arr2[7]);
 
-        boolean[] arr3 = SieveOfEratosthenesSnippet.sieveOfEratosthenes(2);
-        assertTrue(arr3[0]);
-        assertTrue(arr3[1]);
-        assertTrue(arr3[2]);
-    }
+    boolean[] arr3 = SieveOfEratosthenesSnippet.sieveOfEratosthenes(2);
+    assertTrue(arr3[0]);
+    assertTrue(arr3[1]);
+    assertTrue(arr3[2]);
+  }
 }

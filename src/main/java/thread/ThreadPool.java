@@ -32,13 +32,13 @@ import java.util.concurrent.Executors;
  */
 public class ThreadPool {
 
-    /**
-     * <p>Creates pool of threads. Where the pool is the size of the number of processors
-     * available to the Java virtual machine.</p>
-     *
-     * @return the newly created thread pool
-     */
-    public static ExecutorService createFixedThreadPool() {
-        return Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-    }
+  /**
+   * <p>Creates pool of threads. Where the pool is the size of the number of processors
+   * available to the Java virtual machine.</p>
+   *
+   * @return the newly created thread pool
+   */
+  public static ExecutorService createFixedThreadPool() {
+    return Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+  }
 }

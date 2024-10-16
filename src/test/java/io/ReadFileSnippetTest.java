@@ -36,14 +36,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *
  */
 class ReadFileSnippetTest {
-    /**
-     * Tests for {@link ReadFileSnippet#readFile(String)}.
-     */
-    @Test
-    void testReadFile() throws FileNotFoundException {
-        assertEquals("foo", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(0));
-        assertEquals("bar", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(1));
-        assertEquals("baz", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(2));
-        assertNotEquals("abc", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(1));
-    }
+  /**
+   * Tests for {@link ReadFileSnippet#readFile(String)}.
+   */
+  @Test
+  void testReadFile() throws FileNotFoundException {
+    assertEquals("foo", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(0));
+    assertEquals("bar", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(1));
+    assertEquals("baz", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(2));
+    assertNotEquals("abc", ReadFileSnippet.readFile("src/test/resources/somelines.txt").get(1));
+  }
 }

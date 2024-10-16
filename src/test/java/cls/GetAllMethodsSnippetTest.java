@@ -33,12 +33,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  *
  */
 class GetAllMethodsSnippetTest {
-    /**
-     * Tests for {@link GetAllMethodsSnippet#getAllMethods(Class)}.
-     */
-    @Test
-    void testGetAllMethods() {
-        var list = GetAllMethodsSnippet.getAllMethods(GetAllMethodsSnippet.class);
-        assertTrue(list.contains("getAllMethods"));
-    }
+  /**
+   * Tests for {@link GetAllMethodsSnippet#getAllMethods(Class)}.
+   */
+  @Test
+  void testGetAllMethods() {
+    var list = GetAllMethodsSnippet.getAllMethods(GetAllMethodsSnippet.class);
+    assertTrue(list.contains("getAllMethods"));
+  }
 }

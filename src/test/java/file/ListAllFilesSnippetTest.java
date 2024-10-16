@@ -33,12 +33,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  */
 class ListAllFilesSnippetTest {
-    /**
-     * Tests for {@link ListAllFilesSnippet#listAllFiles(String)}.
-     */
-    @Test
-    void testListAllFiles() {
-        var files = ListAllFilesSnippet.listAllFiles("src/test/resources");
-        assertEquals(6, files.size());
-    }
+  /**
+   * Tests for {@link ListAllFilesSnippet#listAllFiles(String)}.
+   */
+  @Test
+  void testListAllFiles() {
+    var files = ListAllFilesSnippet.listAllFiles("src/test/resources");
+    assertEquals(6, files.size());
+  }
 }

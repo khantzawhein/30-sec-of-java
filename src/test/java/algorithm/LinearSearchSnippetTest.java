@@ -34,20 +34,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 class LinearSearchSnippetTest {
 
-    /**
-     * Tests for {@link LinearSearchSnippet#linearSearch(int[], int)}.
-     */
+  /**
+   * Tests for {@link LinearSearchSnippet#linearSearch(int[], int)}.
+   */
 
-    @Test
-    void testLinearSearch() {
-        int[] arr = new int[]{220, 33, 11, 4, 45, 1, 8, 5, 7, 23, 8, 56, 3, 12};
-        assertEquals(7, LinearSearchSnippet.linearSearch(arr, 5));
+  @Test
+  void testLinearSearch() {
+    int[] arr = new int[]{220, 33, 11, 4, 45, 1, 8, 5, 7, 23, 8, 56, 3, 12};
+    assertEquals(7, LinearSearchSnippet.linearSearch(arr, 5));
 
-        int[] arr2 = new int[]{1, 6, 4, 8, 4, 8, 9, 0, 1, 55, 1};
-        assertEquals(3, LinearSearchSnippet.linearSearch(arr2, 8));
+    int[] arr2 = new int[]{1, 6, 4, 8, 4, 8, 9, 0, 1, 55, 1};
+    assertEquals(3, LinearSearchSnippet.linearSearch(arr2, 8));
 
-        int[] arr3 = new int[]{4, 9, 1, 7, 33, 100, 11, 106};
-        assertEquals(-1, LinearSearchSnippet.linearSearch(arr3, 6));
-    }
+    int[] arr3 = new int[]{4, 9, 1, 7, 33, 100, 11, 106};
+    assertEquals(-1, LinearSearchSnippet.linearSearch(arr3, 6));
+  }
 
 }

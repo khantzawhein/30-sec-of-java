@@ -37,17 +37,17 @@ import static org.hamcrest.Matchers.containsString;
  *
  */
 class HttpPostSnippetTest {
-    /**
-     * Tests for {@link HttpPostSnippet#httpPost(String, HashMap)}.
-     */
-    @Test
-    void testHttpPost() throws IOException, InterruptedException {
-        HashMap<String, String> arguments = new HashMap<>();
-        arguments.put("data", "Hello World");
-        var result = HttpPostSnippet.httpPost("https://postman-echo.com/post", arguments);
-        //This postman endpoint echoes the HTTP headers, request parameters, the contents
-        //of the request body and the complete URI requested.
-        var echoedData = "\"data\": \"Hello World\"";
-        assertThat(result.body(), containsString(echoedData));
-    }
+  /**
+   * Tests for {@link HttpPostSnippet#httpPost(String, HashMap)}.
+   */
+  @Test
+  void testHttpPost() throws IOException, InterruptedException {
+    HashMap<String, String> arguments = new HashMap<>();
+    arguments.put("data", "Hello World");
+    var result = HttpPostSnippet.httpPost("https://postman-echo.com/post", arguments);
+    //This postman endpoint echoes the HTTP headers, request parameters, the contents
+    //of the request body and the complete URI requested.
+    var echoedData = "\"data\": \"Hello World\"";
+    assertThat(result.body(), containsString(echoedData));
+  }
 }

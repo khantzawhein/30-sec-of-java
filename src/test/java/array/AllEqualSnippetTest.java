@@ -35,22 +35,22 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  */
 class AllEqualSnippetTest {
-    /**
-     * Tests for {@link AllEqualSnippet#allEqual(Object[])}.
-     */
-    @Test
-    void testAllEqual() {
-        var intArray = new Integer[5];
-        assertTrue(AllEqualSnippet.allEqual(intArray));
-        intArray[0] = 1;
-        assertFalse(AllEqualSnippet.allEqual(intArray));
-        var stringArray = new String[10];
-        Arrays.fill(stringArray, "Hello World");
-        assertTrue(AllEqualSnippet.allEqual(stringArray));
-        stringArray[3] = "Bye World";
-        assertFalse(AllEqualSnippet.allEqual(stringArray));
-        var doubleArray = new Double[1];
-        assertTrue(AllEqualSnippet.allEqual(doubleArray));
-        assertThrows(NullPointerException.class, () -> AllEqualSnippet.allEqual(null));
-    }
+  /**
+   * Tests for {@link AllEqualSnippet#allEqual(Object[])}.
+   */
+  @Test
+  void testAllEqual() {
+    var intArray = new Integer[5];
+    assertTrue(AllEqualSnippet.allEqual(intArray));
+    intArray[0] = 1;
+    assertFalse(AllEqualSnippet.allEqual(intArray));
+    var stringArray = new String[10];
+    Arrays.fill(stringArray, "Hello World");
+    assertTrue(AllEqualSnippet.allEqual(stringArray));
+    stringArray[3] = "Bye World";
+    assertFalse(AllEqualSnippet.allEqual(stringArray));
+    var doubleArray = new Double[1];
+    assertTrue(AllEqualSnippet.allEqual(doubleArray));
+    assertThrows(NullPointerException.class, () -> AllEqualSnippet.allEqual(null));
+  }
 }

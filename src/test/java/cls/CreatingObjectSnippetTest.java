@@ -36,18 +36,18 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *
  */
 class CreatingObjectSnippetTest {
-    /**
-     * Tests for {@link CreatingObjectSnippet#createObject(String)}.
-     */
-    @Test
-    void testCreateObject()
-        throws InvocationTargetException,
-        NoSuchMethodException,
-        InstantiationException,
-        IllegalAccessException,
-        ClassNotFoundException {
-        assertEquals(String.class, CreatingObjectSnippet.createObject("java.lang.String").getClass());
-        assertNotEquals(Integer.class,
-            CreatingObjectSnippet.createObject("java.lang.String").getClass());
-    }
+  /**
+   * Tests for {@link CreatingObjectSnippet#createObject(String)}.
+   */
+  @Test
+  void testCreateObject()
+    throws InvocationTargetException,
+    NoSuchMethodException,
+    InstantiationException,
+    IllegalAccessException,
+    ClassNotFoundException {
+    assertEquals(String.class, CreatingObjectSnippet.createObject("java.lang.String").getClass());
+    assertNotEquals(Integer.class,
+      CreatingObjectSnippet.createObject("java.lang.String").getClass());
+  }
 }

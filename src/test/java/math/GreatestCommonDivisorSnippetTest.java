@@ -33,14 +33,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  */
 class GreatestCommonDivisorSnippetTest {
-    /**
-     * Tests for {@link GreatestCommonDivisorSnippet#gcd(int, int)}.
-     */
-    @Test
-    void testGcd() {
-        assertEquals(2, GreatestCommonDivisorSnippet.gcd(2, 4));
-        assertEquals(1, GreatestCommonDivisorSnippet.gcd(2, 5));
-        assertEquals(6, GreatestCommonDivisorSnippet.gcd(18, 24));
-        assertEquals(7, GreatestCommonDivisorSnippet.gcd(7, 7));
-    }
+  /**
+   * Tests for {@link GreatestCommonDivisorSnippet#gcd(int, int)}.
+   */
+  @Test
+  void testGcd() {
+    assertEquals(2, GreatestCommonDivisorSnippet.gcd(2, 4));
+    assertEquals(1, GreatestCommonDivisorSnippet.gcd(2, 5));
+    assertEquals(6, GreatestCommonDivisorSnippet.gcd(18, 24));
+    assertEquals(7, GreatestCommonDivisorSnippet.gcd(7, 7));
+  }
 }

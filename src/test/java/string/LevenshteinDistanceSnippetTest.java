@@ -33,17 +33,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  */
 class LevenshteinDistanceSnippetTest {
-    /**
-     * Tests for {@link LevenshteinDistanceSnippet#findLevenshteinDistance(String, String)}.
-     */
-    @Test
-    void testFindLevenshteinDistance() {
-        assertEquals(3, LevenshteinDistanceSnippet.findLevenshteinDistance("kitten", "kit"));
-        assertEquals(6, LevenshteinDistanceSnippet.findLevenshteinDistance("kitten", ""));
-        assertEquals(7, LevenshteinDistanceSnippet.findLevenshteinDistance("", "sitting"));
-        assertEquals(3, LevenshteinDistanceSnippet.findLevenshteinDistance("kitten", "sitting"));
-        assertEquals(5, LevenshteinDistanceSnippet.findLevenshteinDistance("intention", "execution"));
-        assertEquals(10, LevenshteinDistanceSnippet
-            .findLevenshteinDistance("zoologicoarchaeologist", "zoogeologist"));
-    }
+  /**
+   * Tests for {@link LevenshteinDistanceSnippet#findLevenshteinDistance(String, String)}.
+   */
+  @Test
+  void testFindLevenshteinDistance() {
+    assertEquals(3, LevenshteinDistanceSnippet.findLevenshteinDistance("kitten", "kit"));
+    assertEquals(6, LevenshteinDistanceSnippet.findLevenshteinDistance("kitten", ""));
+    assertEquals(7, LevenshteinDistanceSnippet.findLevenshteinDistance("", "sitting"));
+    assertEquals(3, LevenshteinDistanceSnippet.findLevenshteinDistance("kitten", "sitting"));
+    assertEquals(5, LevenshteinDistanceSnippet.findLevenshteinDistance("intention", "execution"));
+    assertEquals(10, LevenshteinDistanceSnippet
+      .findLevenshteinDistance("zoologicoarchaeologist", "zoogeologist"));
+  }
 }

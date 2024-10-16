@@ -31,31 +31,31 @@ import java.util.Arrays;
  */
 public class AnagramSnippet {
 
-    private AnagramSnippet() {
+  private AnagramSnippet() {
+  }
+
+  /**
+   * Checks if two words are anagrams (contains same characters with same frequency in any order).
+   *
+   * @param s1 The first string to be checked
+   * @param s2 The second string to be checked
+   * @return true if they are anagrams of each other
+   */
+  public static boolean isAnagram(String s1, String s2) {
+    var l1 = s1.length();
+    var l2 = s2.length();
+
+    if (l1 != l2) {
+      return false;
     }
 
-    /**
-     * Checks if two words are anagrams (contains same characters with same frequency in any order).
-     *
-     * @param s1 The first string to be checked
-     * @param s2 The second string to be checked
-     * @return true if they are anagrams of each other
-     */
-    public static boolean isAnagram(String s1, String s2) {
-        var l1 = s1.length();
-        var l2 = s2.length();
+    var arr1 = new int[256];
+    var arr2 = new int[256];
 
-        if (l1 != l2) {
-            return false;
-        }
-
-        var arr1 = new int[256];
-        var arr2 = new int[256];
-
-        for (var i = 0; i < l1; i++) {
-            arr1[s1.charAt(i)]++;
-            arr2[s2.charAt(i)]++;
-        }
-        return Arrays.equals(arr1, arr2);
+    for (var i = 0; i < l1; i++) {
+      arr1[s1.charAt(i)]++;
+      arr2[s2.charAt(i)]++;
     }
+    return Arrays.equals(arr1, arr2);
+  }
 }

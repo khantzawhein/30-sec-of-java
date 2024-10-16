@@ -34,15 +34,15 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  *
  */
 class AnagramSnippetTest {
-    /**
-     * Tests for {@link AnagramSnippet#isAnagram(String, String)}.
-     */
-    @Test
-    void testIsAnagram() {
-        assertTrue(AnagramSnippet.isAnagram("Aditya", "aytdiA"));
-        assertFalse(AnagramSnippet.isAnagram("Aditya", "aytida"));
-        assertTrue(AnagramSnippet.isAnagram("~~# @!", "~@!#~ "));
-        assertTrue(AnagramSnippet.isAnagram("Mother In Law", "hIt Ler woMan"));
-        assertFalse(AnagramSnippet.isAnagram("aa", "aaa"));
-    }
+  /**
+   * Tests for {@link AnagramSnippet#isAnagram(String, String)}.
+   */
+  @Test
+  void testIsAnagram() {
+    assertTrue(AnagramSnippet.isAnagram("Aditya", "aytdiA"));
+    assertFalse(AnagramSnippet.isAnagram("Aditya", "aytida"));
+    assertTrue(AnagramSnippet.isAnagram("~~# @!", "~@!#~ "));
+    assertTrue(AnagramSnippet.isAnagram("Mother In Law", "hIt Ler woMan"));
+    assertFalse(AnagramSnippet.isAnagram("aa", "aaa"));
+  }
 }
