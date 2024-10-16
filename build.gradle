@@ -14,7 +14,9 @@ apply plugin: 'jacoco'
 
 jacocoTestReport {
     reports {
-        xml.enabled true
+        xml.required = true
+        csv.required = true
+        html.required = true
     }
 }
 
